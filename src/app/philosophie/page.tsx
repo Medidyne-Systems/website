@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Repeat,
   Route,
@@ -11,6 +12,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import heroBg from "../../../public/images/hero_bg.png";
+import automationImg from "../../../public/images/automation.jpg";
 
 export const metadata: Metadata = {
   title: "Philosophie",
@@ -88,9 +90,6 @@ export default function PhilosophiePage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
           <div className="hero-backdrop px-8 py-5">
-            <p className="hero-text-shadow text-sm font-semibold uppercase tracking-widest text-black mb-3">
-              Unsere Vision
-            </p>
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
               Philosophie
             </h1>
@@ -106,23 +105,40 @@ export default function PhilosophiePage() {
 
       {/* ─── Leitgedanke ─── */}
       <section className="py-16 lg:py-20 bg-snow">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight mb-8">
-            Warum wir EmMa entwickeln
-          </h2>
-          <p className="text-lg text-midnight/55 leading-relaxed mb-6">
-            In vielen Arztpraxen verbringt das Team einen großen Teil des Tages
-            mit Aufgaben, die sich wiederholen: Patienten anmelden,
-            Dokumentationen schreiben, Abrechnungen prüfen, Dienstpläne
-            erstellen. Gleichzeitig fehlt oft die Zeit für das, wofür alle
-            eigentlich da sind — die Patientenversorgung.
-          </p>
-          <p className="text-lg text-midnight/55 leading-relaxed">
-            Wir glauben, dass Technologie genau hier ansetzen muss. Nicht als
-            weiteres Programm in einer langen Liste, sondern als eine
-            durchdachte Plattform, die den gesamten Praxisalltag abbildet und
-            dort automatisiert, wo es sinnvoll ist.
-          </p>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Warum wir EmMa entwickeln
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-midnight/55 leading-relaxed mb-6">
+                In vielen Arztpraxen verbringt das Team einen großen Teil des
+                Tages mit Aufgaben, die sich wiederholen: Patienten anmelden,
+                Dokumentationen schreiben, Abrechnungen prüfen, Dienstpläne
+                erstellen. Gleichzeitig fehlt oft die Zeit für das, wofür alle
+                eigentlich da sind — die Patientenversorgung.
+              </p>
+              <p className="text-lg text-midnight/55 leading-relaxed">
+                Wir glauben, dass Technologie genau hier ansetzen muss. Nicht
+                als weiteres Programm in einer langen Liste, sondern als eine
+                durchdachte Plattform, die den gesamten Praxisalltag abbildet
+                und dort automatisiert, wo es sinnvoll ist.
+              </p>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden max-w-md mx-auto">
+              <Image
+                src={automationImg}
+                alt="KI-gestützte Automatisierung in der Arztpraxis"
+                width={700}
+                height={500}
+                className="w-full h-auto rounded-2xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

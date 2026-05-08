@@ -26,9 +26,6 @@ export default function KontaktPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
           <div className="hero-backdrop px-8 py-5">
-            <p className="hero-text-shadow text-sm font-semibold uppercase tracking-widest text-black mb-3">
-              Kontakt
-            </p>
             <h1 className="font-display text-2xl lg:text-3xl tracking-tight text-white mb-3">
               Kontaktieren Sie uns
             </h1>

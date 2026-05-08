@@ -44,3 +44,7 @@ next-env.d.ts
 Team/
 CLAUDE.md
 tmpclaude-*
+
+# Kommunikation User <-> Claude (lokal, nicht ins Repo)
+/inbox/
+/outbox/

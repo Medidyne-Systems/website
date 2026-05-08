@@ -17,7 +17,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import heroBg from "../../public/images/hero_bg.png";
-import automationImg from "../../public/images/automation.jpg";
+import terminal4 from "../../public/images/terminal_4.jpeg";
 
 const efficiencyPoints = [
   "Optimierung der Praxisabläufe durch Software und KI-Technologie",
@@ -197,13 +197,13 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative aspect-square rounded-2xl overflow-hidden">
               <Image
-                src={automationImg}
-                alt="KI-gestützte Automatisierung in der Arztpraxis"
-                width={700}
-                height={500}
-                className="w-full h-auto object-cover rounded-2xl"
+                src={terminal4}
+                alt="Self-Check-In Terminal in der Arztpraxis"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>

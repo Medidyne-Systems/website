@@ -12,8 +12,8 @@ Steuerungsebene ist ausschliesslich der Web-Leiter.
 | Framework | Next.js 16 (App Router) |
 | Sprache | TypeScript |
 | Styling | Tailwind CSS v4 |
-| Deployment | Vercel (Hobby Account) |
-| Domain | medidyne-systems.de |
+| Deployment | GitHub Pages (Static Export, Auto-Deploy via `.github/workflows/deploy.yml`) |
+| Domain | medidyne-systems.de (Produktion noch auf Hostinger), Preview: fuchs-medidyne.github.io/website |
 | Marke | Medidyne Systems GmbH / EmMa.AI |
 
 ## Kern-Team
