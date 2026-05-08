@@ -100,6 +100,11 @@ Definiert in `src/app/globals.css` im `@theme` Block. IMMER diese Farben verwend
 - Kommunikation mit dem User auf Deutsch
 - Technische Bezeichnungen (Code, Variablen, Dateinamen, Commit-Messages) bleiben Englisch
 
+## Rückfragen an den User
+- Bei Rückfragen **keine eigenen Antworten/Lösungen vorschlagen** — nur das Problem benennen und fragen. Der User entscheidet selbst, wie es weitergeht.
+- Beispiel falsch: "Tippfehler gefunden — soll ich ihn zu X korrigieren?"
+- Beispiel richtig: "Tippfehler gefunden in Zeile Y — wie möchtest du es korrigiert haben?"
+
 ## Brand Assets
 - Bilder liegen in `public/images/` — immer verwenden statt Platzhalter
 - Logo: `logo_medidyne.png` — im Header und Footer eingebunden, in Originalfarben (Teal + Mauve)
