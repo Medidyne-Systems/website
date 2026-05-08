@@ -29,18 +29,18 @@ const pillars = [
   {
     icon: Zap,
     title: "Effizientere Abläufe",
-    description: "Zentrale Verwaltung von Benutzern und Rollen.",
+    description: "Digitalisieren, Automatisieren und Unterstützen damit Zeit für die wirklich wichtigen Dinge übrig bleibt",
   },
   {
     icon: Shield,
     title: "Sicherheit und Kontrolle",
-    description: "Klare Zugriffsbeschränkungen je nach Funktion.",
+    description: "Deutsche Server mit maximaler Datensicherheit auf mehreren Layern",
   },
   {
     icon: Cloud,
     title: "Software as a Service & Cloud",
     description:
-      "Betrieb in einer professionellen Cloud-Infrastruktur. Keine lokale Installation oder Wartung erforderlich. Zugriff über Browser — unabhängig von Endgerät und Standort.",
+      "Betrieb in einer professionellen deutschen Cloud-Infrastruktur. Zugriff über Browser — unabhängig von Endgerät und Standort.",
   },
   {
     icon: RefreshCcw,
@@ -61,7 +61,7 @@ const useCases = [
 ];
 
 const trustPoints = [
-  { icon: Heart, text: "Entwickelt für den Einsatz im medizinischen Umfeld" },
+  { icon: Heart, text: "Entwickelt aus und für den Einsatz im medizinischen Umfeld" },
   { icon: ClipboardCheck, text: "Berücksichtigung praxisrelevanter Workflows" },
   { icon: Lightbulb, text: "Einsatz von KI, datenschutzkonform auf deutschen Servern" },
   { icon: Shield, text: "Fokus auf Sicherheit, Stabilität und Erweiterbarkeit" },
@@ -103,8 +103,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Effizienz steigern", desc: "Optimierung der Praxisabläufe durch KI-Technologie" },
-              { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte Prozesse" },
+              { title: "Effizienz steigern", desc: "Von der Patientenaufname bis zur Abrechnungs-Optimierung. Alles auf einer Plattform" },
+              { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte und unterstützende Prozesse" },
               { title: "KI-gestützte Automatisierung", desc: "Entlastung für Ärzte und medizinisches Fachpersonal" },
             ].map((item) => (
               <div key={item.title} className="text-center p-6 rounded-xl bg-snow border border-violet/5">
@@ -130,16 +130,15 @@ export default function HomePage() {
                 <span className="gradient-text-dark">Automatisierung</span>
               </h2>
               <p className="text-midnight/55 leading-relaxed mb-4">
-                Optimieren Sie Anmeldung, Benutzerverwaltung und
+                Optimieren Sie Anmeldung, Patientensteuerung und
                 Praxisabläufe mit einer cloudbasierten SaaS-Lösung — sicher,
                 wartungsarm und speziell für den professionellen Einsatz im
                 medizinischen Alltag entwickelt.
               </p>
               <p className="text-midnight/55 leading-relaxed mb-8">
                 Unsere Lösung unterstützt Arztpraxen bei der digitalen
-                Organisation von Patienten- und Benutzerprozessen. Von der
-                rollenbasierten Benutzerverwaltung bis zum Self-Check-In am
-                Terminal — alle Funktionen sind praxisnah, effizient und
+                Organisation von Patienten- und Benutzerprozessen. Von Self-Check-In am
+                Terminal bis hin zur Abrechnungs-Optimierung — alle Funktionen sind praxisnah, effizient und
                 datenschutzkonform konzipiert.
               </p>
 
