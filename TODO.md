@@ -5,7 +5,7 @@
   - [ ] Startseite: Praxis-Bild (moderne Arztpraxis mit EmMa Terminal)
   - [ ] Über uns: Team-Portraits (Eduard Warth, Bettina Schindler, Dr. Christian Fuchs)
   - [ ] Über uns: Teambild / Bürofoto
-- [ ] Domain `medidyne-systems.de` von Hostinger auf Vercel umstellen
+- [x] Domain `medidyne-systems.de` von Hostinger auf GitHub Pages umstellen
 
 ## Mittlere Priorität
 - [ ] Kontaktformular mit echtem Backend verbinden (aktuell nur Client-side Dummy)
