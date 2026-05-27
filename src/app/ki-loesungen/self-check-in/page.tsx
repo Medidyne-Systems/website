@@ -116,7 +116,7 @@ const hardwareSpecs = [
   { icon: Navigation, label: "Sauberes Design" },
   { icon: CreditCard, label: "Halterung für Kartenlesegerät (Cherry ST 1506)" },
   { icon: Volume2, label: "Integrierte Soundbar" },
-  { icon: Anchor, label: "Stabile Bodenmontage" },
+  { icon: Anchor, label: "Stabile Bodenmontage möglich" },
 ];
 
 export default function SelfCheckInPage() {
