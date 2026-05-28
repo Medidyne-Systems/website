@@ -27,7 +27,6 @@ import {
   HardDrive,
   Anchor,
 } from "lucide-react";
-import { StatusBadge } from "@/components/StatusBadge";
 
 export const metadata: Metadata = {
   title: "Self-Check-In Terminal",
@@ -129,10 +128,7 @@ export default function SelfCheckInPage() {
         <div className="absolute inset-0 bg-midnight/40" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
-          <div className="hero-backdrop-module px-8 py-5 relative">
-            <div className="absolute top-3 right-3">
-              <StatusBadge status="available" size="sm" />
-            </div>
+          <div className="hero-backdrop-module px-8 py-5">
             <p className="module-label text-base font-semibold uppercase tracking-widest text-white mb-3">
               EmMa Modul · Terminal
             </p>

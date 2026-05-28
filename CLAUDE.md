@@ -46,21 +46,23 @@ src/
 │   ├── page.tsx                             # Startseite
 │   ├── ueber-uns/page.tsx
 │   ├── philosophie/page.tsx
-│   ├── ki-loesungen/
+│   ├── ki-loesungen/                        # zeigt nur verfügbare Module (status: "available")
 │   │   ├── page.tsx                         # KI-Lösungen Übersicht
 │   │   ├── self-check-in/page.tsx
 │   │   ├── patienten-aufruf/page.tsx
 │   │   ├── sprechstunden-doku/page.tsx
 │   │   ├── dokumenten-management/page.tsx
-│   │   ├── abrechnungs-optimierung/page.tsx
-│   │   ├── dienstplanung/page.tsx
 │   │   └── gutachten-erstellung/page.tsx
+│   ├── roadmap/page.tsx                     # zeigt Module mit Status "in-development" / "planned"
 │   ├── kontakt/page.tsx
 │   ├── impressum/page.tsx
 │   └── datenschutz/page.tsx
 ├── components/
 │   ├── Header.tsx                           # Sticky Nav mit Mobile-Menü
-│   └── Footer.tsx
+│   ├── Footer.tsx
+│   └── StatusBadge.tsx                      # Verfügbar / In Entwicklung / Geplant Pills
+├── data/
+│   └── modules.ts                           # ZENTRALE Modul-Datenquelle (Status, displayName, internalName)
 public/
 └── images/
     ├── logo_medidyne.png                    # Firmenlogo
@@ -68,6 +70,7 @@ public/
     ├── abrechnung.jpg
     ├── automation.jpg
     ├── dienstplan.jpg
+    ├── dokumente.jpg                        # Dokumenten-Management
     ├── gutachten.jpg
     ├── wartezimmer.jpg
     ├── website_sprechstundedoku.jpg
