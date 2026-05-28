@@ -1,26 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Play,
-  ImageIcon,
-  Monitor,
-  Users,
-  Mic,
-  FileCheck,
-  Calculator,
-  CalendarDays,
-} from "lucide-react";
+import { Cloud, ArrowRight, CheckCircle, ImageIcon, Wrench } from "lucide-react";
 import heroBg from "../../../public/images/hero_bg.png";
-import terminal4 from "../../../public/images/terminal_4.jpeg";
-import sprechstundeDoku from "../../../public/images/website_sprechstundedoku.jpg";
-import wartezimmer from "../../../public/images/wartezimmer.jpg";
-import gutachten from "../../../public/images/gutachten.jpg";
-import abrechnung from "../../../public/images/abrechnung.jpg";
-import dienstplan from "../../../public/images/dienstplan.jpg";
+import { availableModules, inDevelopmentModules } from "@/data/modules";
+import { StatusBadge } from "@/components/StatusBadge";
 
 export const metadata: Metadata = {
   title: "KI Lösungen",
@@ -32,75 +16,6 @@ const saasPoints = [
   "Hoher Verfügbarkeit",
   "Zentraler Wartung",
   "Stets aktueller Software",
-];
-
-const modules = [
-  {
-    icon: Monitor,
-    title: "Self-Check-In Terminal",
-    description:
-      "Digitale Patientenanmeldung via Touchscreen-Terminal. Individualisierbare Check-In-Prozesse, Entlastung des Empfangsteams und optimierte Patientenführung.",
-    href: "/ki-loesungen/self-check-in",
-    linkText: "Weitere Details zum Terminal",
-    placeholderType: "image" as const,
-    placeholderLabel: "Self-Check-In Terminal",
-    image: terminal4,
-  },
-  {
-    icon: Users,
-    title: "Patienten-Aufruf",
-    description:
-      "Digitales Aufruf-System für das Wartezimmer. Patienten werden über Bildschirme aufgerufen — organisiert, diskret und nahtlos mit dem Self-Check-In verknüpft.",
-    href: "/ki-loesungen/patienten-aufruf",
-    linkText: "Mehr zum Patienten-Aufruf",
-    placeholderType: "image" as const,
-    placeholderLabel: "Patienten-Aufruf",
-    image: wartezimmer,
-  },
-  {
-    icon: Mic,
-    title: "Sprechstunden-Dokumentation",
-    description:
-      "Widmen Sie sich voll und ganz Ihrem Patienten. Das Arzt-Patienten-Gespräch wird KI-gestützt erfasst und automatisch in eine strukturierte Dokumentation überführt.",
-    href: "/ki-loesungen/sprechstunden-doku",
-    linkText: "Mehr zur Sprechstunden-Doku",
-    placeholderType: "image" as const,
-    placeholderLabel: "Sprechstunden-Dokumentation",
-    image: sprechstundeDoku,
-  },
-  {
-    icon: FileCheck,
-    title: "Gutachten-Erstellung",
-    description:
-      "KI-unterstützte Erstellung von Gutachten, Attesten und Arztbriefen. Unterlagen hochladen, KI-Entwurf erhalten, nachbearbeiten und freigeben.",
-    href: "/ki-loesungen/gutachten-erstellung",
-    linkText: "Mehr zur Gutachten-Erstellung",
-    placeholderType: "image" as const,
-    placeholderLabel: "Gutachten-Erstellung",
-    image: gutachten,
-  },
-  {
-    icon: Calculator,
-    title: "Abrechnungs-Optimierung",
-    description:
-      "Wurde eine Leistung erbracht, aber nicht abgerechnet? Das System identifiziert systematisch fehlende Abrechnungsziffern — für EBM, GOÄ und HZV. Ausserdem kann gezielt nach Potentialen gesucht werden um in Zukunft noch effizienter zu arbeiten.",
-    href: "/ki-loesungen/abrechnungs-optimierung",
-    linkText: "Mehr zur Abrechnungs-Optimierung",
-    placeholderType: "image" as const,
-    placeholderLabel: "Abrechnungs-Optimierung",
-    image: abrechnung,
-  },
-  {
-    icon: CalendarDays,
-    title: "Dienstplanung",
-    description:
-      "Intelligente Schicht- und Urlaubsplanung für Ihr gesamtes Team. Standortübergreifend und fair mit automatischem Dienstplan-Generator.",
-    href: "/ki-loesungen/dienstplanung",
-    linkText: "Mehr zur Dienstplanung",
-    placeholderType: "image" as const,
-    placeholderLabel: "Dienstplanung",
-    image: dienstplan,
-  },
 ];
 
 export default function KiLoesungenPage() {
@@ -168,22 +83,25 @@ export default function KiLoesungenPage() {
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
               Funktionen im Überblick
             </h2>
+            <p className="mt-3 text-base text-midnight/50">
+              Diese Module sind heute verfügbar und Teil der EmMa-Basisfunktion.
+            </p>
           </div>
 
           <div className="space-y-16">
-            {modules.map((mod, index) => (
+            {availableModules.map((mod, index) => (
               <div
-                key={mod.title}
+                key={mod.slug}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
                   index % 2 === 1 ? "lg:[direction:rtl]" : ""
                 }`}
               >
                 {/* Bild oder Platzhalter */}
                 <div className="relative aspect-video rounded-2xl bg-gradient-to-br from-abyss to-midnight flex items-center justify-center overflow-hidden border border-violet/10 lg:[direction:ltr]">
-                  {"image" in mod && mod.image ? (
+                  {mod.image ? (
                     <Image
                       src={mod.image}
-                      alt={mod.title}
+                      alt={mod.displayName}
                       fill
                       className="object-cover"
                     />
@@ -193,9 +111,12 @@ export default function KiLoesungenPage() {
                         <ImageIcon className="w-8 h-8 text-violet" />
                       </div>
                       <p className="text-white/50 text-sm font-medium">Bild-Platzhalter</p>
-                      <p className="text-white/30 text-xs">{mod.placeholderLabel}</p>
+                      <p className="text-white/30 text-xs">{mod.displayName}</p>
                     </div>
                   )}
+                  <div className="absolute top-4 right-4">
+                    <StatusBadge status={mod.status} size="sm" />
+                  </div>
                 </div>
 
                 {/* Beschreibung */}
@@ -205,17 +126,17 @@ export default function KiLoesungenPage() {
                       <mod.icon className="w-5 h-5 text-violet" />
                     </div>
                     <h3 className="font-display text-xl lg:text-2xl tracking-tight text-midnight">
-                      {mod.title}
+                      {mod.displayName}
                     </h3>
                   </div>
                   <p className="text-midnight/60 leading-relaxed mb-6">
                     {mod.description}
                   </p>
                   <Link
-                    href={mod.href}
+                    href={`/ki-loesungen/${mod.slug}`}
                     className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.4)]"
                   >
-                    {mod.linkText}
+                    {mod.linkText ?? `Mehr zu ${mod.displayName}`}
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
@@ -224,6 +145,60 @@ export default function KiLoesungenPage() {
           </div>
         </div>
       </section>
+
+      {/* ─── Ausblick: In Entwicklung ─── */}
+      {inDevelopmentModules.length > 0 && (
+        <section className="py-16 lg:py-20 bg-snow">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full bg-mauve/15 text-sm text-mauve font-medium">
+                <Wrench className="w-4 h-4" />
+                Ausblick
+              </div>
+              <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight mb-3">
+                Module in Entwicklung
+              </h2>
+              <p className="text-base text-midnight/55 max-w-2xl mx-auto">
+                Diese Module bauen wir aktuell — sie sind noch nicht Teil der
+                Basisfunktion. Auf der Roadmap zeigen wir, woran wir gerade arbeiten
+                und was als nächstes kommt.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
+              {inDevelopmentModules.map((mod) => (
+                <div
+                  key={mod.slug}
+                  className="p-6 rounded-xl bg-white border border-mauve/10"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-mauve/10 flex items-center justify-center shrink-0">
+                      <mod.icon className="w-5 h-5 text-mauve" />
+                    </div>
+                    <StatusBadge status={mod.status} size="sm" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-midnight mb-2">
+                    {mod.displayName}
+                  </h3>
+                  <p className="text-sm text-midnight/55 leading-relaxed">
+                    {mod.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/roadmap"
+                className="group inline-flex items-center gap-2 bg-mauve hover:bg-mauve-light text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(142,107,135,0.35)]"
+              >
+                Zur Roadmap
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ─── CTA ─── */}
       <section className="py-16 bg-gradient-to-r from-violet/5 via-mauve/5 to-violet/5">

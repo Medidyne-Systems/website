@@ -17,10 +17,10 @@ const navItems = [
       { label: "Patienten-Aufruf", href: "/ki-loesungen/patienten-aufruf" },
       { label: "Sprechstunden-Dokumentation", href: "/ki-loesungen/sprechstunden-doku" },
       { label: "Gutachten-Erstellung", href: "/ki-loesungen/gutachten-erstellung" },
-      { label: "Abrechnungs-Optimierung", href: "/ki-loesungen/abrechnungs-optimierung" },
-      { label: "Dienstplanung", href: "/ki-loesungen/dienstplanung" },
+      { label: "Dokumenten-Management", href: "/ki-loesungen/dokumenten-management" },
     ],
   },
+  { label: "Roadmap", href: "/roadmap" },
 ];
 
 export default function Header() {

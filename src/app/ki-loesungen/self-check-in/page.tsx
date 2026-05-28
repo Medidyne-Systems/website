@@ -27,6 +27,7 @@ import {
   HardDrive,
   Anchor,
 } from "lucide-react";
+import { StatusBadge } from "@/components/StatusBadge";
 
 export const metadata: Metadata = {
   title: "Self-Check-In Terminal",
@@ -128,18 +129,18 @@ export default function SelfCheckInPage() {
         <div className="absolute inset-0 bg-midnight/40" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
-          <div className="hero-backdrop-module px-8 py-5">
+          <div className="hero-backdrop-module px-8 py-5 relative">
+            <div className="absolute top-3 right-3">
+              <StatusBadge status="available" size="sm" />
+            </div>
             <p className="module-label text-base font-semibold uppercase tracking-widest text-white mb-3">
-              EmMa Modul
+              EmMa Modul · Terminal
             </p>
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
               Self-Check-In Terminal für Patienten
             </h1>
             <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
-              Ermöglichen Sie einen schnellen, kontaktarmen und intuitiven
-              Praxisempfang. Die Touchscreen-basierte Selbstanmeldung ist
-              speziell für den medizinischen Einsatz konzipiert: klar
-              strukturiert, barrierearm und individuell anpassbar.
+              Schneller, kontaktarmer Praxisempfang per Touchscreen.
             </p>
           </div>
         </div>
@@ -154,6 +155,12 @@ export default function SelfCheckInPage() {
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
               Funktionen
             </h2>
+            <p className="mt-4 text-base text-midnight/60 leading-relaxed max-w-2xl mx-auto">
+              Ermöglichen Sie einen schnellen, kontaktarmen und intuitiven
+              Praxisempfang. Die Touchscreen-basierte Selbstanmeldung ist
+              speziell für den medizinischen Einsatz konzipiert: klar
+              strukturiert, barrierearm und individuell anpassbar.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

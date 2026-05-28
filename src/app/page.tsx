@@ -15,6 +15,9 @@ import {
   Heart,
   ClipboardCheck,
   Lightbulb,
+  Wrench,
+  Calculator,
+  CalendarDays,
 } from "lucide-react";
 import heroBg from "../../public/images/hero_bg.png";
 import terminal4 from "../../public/images/terminal_4.jpeg";
@@ -50,14 +53,17 @@ const pillars = [
   },
 ];
 
-const useCases = [
+const availableUseCases = [
   { icon: Monitor, text: "Digitaler Self-Check-In für Patienten" },
   { icon: Settings, text: "Zentrale Konfiguration von Praxis-Terminals" },
   { icon: FileText, text: "Unterstützung zur Sprechstundendokumentation" },
   { icon: FileCheck, text: "Unterstützung bei der Gutachtenerstellung" },
   { icon: Users, text: "Vereinfachter Wartezimmeraufruf" },
-  { icon: FileCheck, text: "Eigens konfigurierbare Prüfung und Optimierung der Abrechnung" },
-  { icon: ClipboardCheck, text: "Hilfe bei der Dienstplanerstellung und Pflege" },
+];
+
+const inDevelopmentUseCases = [
+  { icon: Calculator, text: "Eigens konfigurierbare Prüfung und Optimierung der Abrechnung" },
+  { icon: CalendarDays, text: "Hilfe bei der Dienstplanerstellung und Pflege" },
 ];
 
 const trustPoints = [
@@ -142,7 +148,7 @@ export default function HomePage() {
                 datenschutzkonform konzipiert.
               </p>
 
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
                   <span className="text-midnight/70">
@@ -167,25 +173,33 @@ export default function HomePage() {
                     Gutachtenerstellung mit Hilfe von KI
                   </span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    Abrechnungs-Optimierung welche individuell anpassbar ist
-                  </span>
+              </div>
+
+              {/* ─── Sub-Block: In Entwicklung ─── */}
+              <div className="rounded-xl border border-mauve/15 bg-mauve/5 p-4 mb-6">
+                <div className="inline-flex items-center gap-2 mb-3 px-2.5 py-1 rounded-full bg-mauve/15 text-xs text-mauve font-medium">
+                  <Wrench className="w-3.5 h-3.5" />
+                  In Entwicklung
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    Dienstplanerstellung und Management mit geringstem Aufwand
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    Reduzierung administrativer Tätigkeiten
-                  </span>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-3">
+                    <Wrench className="w-5 h-5 text-mauve shrink-0 mt-0.5" />
+                    <span className="text-midnight/70">
+                      Abrechnungs-Optimierung welche individuell anpassbar ist
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Wrench className="w-5 h-5 text-mauve shrink-0 mt-0.5" />
+                    <span className="text-midnight/70">
+                      Dienstplanerstellung und Management mit geringstem Aufwand
+                    </span>
+                  </div>
                 </div>
               </div>
+
+              <p className="text-sm text-midnight/50 italic mb-8">
+                → Das Resultat: spürbare Reduzierung administrativer Tätigkeiten.
+              </p>
 
               <Link
                 href="/kontakt"
@@ -250,7 +264,7 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {useCases.map((uc) => (
+            {availableUseCases.map((uc) => (
               <div
                 key={uc.text}
                 className="group flex items-center gap-4 p-4 rounded-xl bg-white border border-violet/5 hover:shadow-md hover:shadow-violet/5 transition-all duration-300"
@@ -263,6 +277,40 @@ export default function HomePage() {
                 </span>
               </div>
             ))}
+          </div>
+
+          {/* ─── Sub-Block: In Entwicklung ─── */}
+          <div className="max-w-3xl mx-auto mt-10">
+            <div className="rounded-2xl border border-mauve/15 bg-mauve/5 p-6">
+              <div className="flex items-center justify-center gap-2 mb-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-mauve/15 text-sm text-mauve font-medium">
+                  <Wrench className="w-4 h-4" />
+                  In Entwicklung
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {inDevelopmentUseCases.map((uc) => (
+                  <div
+                    key={uc.text}
+                    className="flex items-center gap-4 p-4 rounded-xl bg-white border border-mauve/10"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-mauve/10 flex items-center justify-center shrink-0">
+                      <uc.icon className="w-4 h-4 text-mauve" />
+                    </div>
+                    <span className="text-sm font-medium text-midnight/70">
+                      {uc.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-midnight/45 mt-4 text-center">
+                Diese Module bauen wir gerade —{" "}
+                <Link href="/roadmap" className="text-mauve hover:text-mauve-light underline-offset-4 hover:underline">
+                  zur Roadmap
+                </Link>
+                .
+              </p>
+            </div>
           </div>
 
           <div className="text-center mt-8">
