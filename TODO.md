@@ -1,10 +1,6 @@
 # TODO — Medidyne Website
 
 ## Hohe Priorität
-- [ ] Platzhalter-Bilder durch echte Fotos ersetzen
-  - [ ] Startseite: Praxis-Bild (moderne Arztpraxis mit EmMa Terminal)
-  - [ ] Über uns: Team-Portraits (Eduard Warth, Bettina Schindler, Dr. Christian Fuchs)
-  - [ ] Über uns: Teambild / Bürofoto
 - [x] Domain `medidyne-systems.de` von Hostinger auf GitHub Pages umstellen
 
 ## Mittlere Priorität
