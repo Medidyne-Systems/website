@@ -12,12 +12,13 @@ import {
   FileText,
   FileCheck,
   Users,
-  Heart,
-  ClipboardCheck,
-  Lightbulb,
   Wrench,
   Calculator,
   CalendarDays,
+  Stethoscope,
+  Server,
+  Cpu,
+  Lock,
 } from "lucide-react";
 import heroBg from "../../public/images/hero_bg.png";
 import terminal4 from "../../public/images/terminal_4.jpeg";
@@ -66,11 +67,31 @@ const inDevelopmentUseCases = [
   { icon: CalendarDays, text: "Hilfe bei der Dienstplanerstellung und Pflege" },
 ];
 
-const trustPoints = [
-  { icon: Heart, text: "Entwickelt aus und für den Einsatz im medizinischen Umfeld" },
-  { icon: ClipboardCheck, text: "Berücksichtigung praxisrelevanter Workflows" },
-  { icon: Lightbulb, text: "Einsatz von KI, datenschutzkonform auf deutschen Servern" },
-  { icon: Shield, text: "Fokus auf Sicherheit, Stabilität und Erweiterbarkeit" },
+const sovereigntyPoints = [
+  {
+    icon: Stethoscope,
+    title: "Aus der Praxis entwickelt",
+    description:
+      "EmMa entsteht in einer Arztpraxis — von einem kleinen deutschen Startup, das den medizinischen Alltag aus eigener Erfahrung kennt.",
+  },
+  {
+    icon: Server,
+    title: "Hosting in Deutschland",
+    description:
+      "Betrieb in der StackIT-Cloud — deutsche Rechenzentren, deutsche Datenhoheit. Ihre Daten verlassen Deutschland nicht.",
+  },
+  {
+    icon: Cpu,
+    title: "Europäisches Sprachmodell",
+    description:
+      "Unsere KI arbeitet mit einem in Europa entwickelten Sprachmodell — keine Datenübermittlung an außereuropäische Anbieter.",
+  },
+  {
+    icon: Lock,
+    title: "Datenschutz an erster Stelle",
+    description:
+      "Der Schutz sensibler Patientendaten ist unsere höchste Priorität — von der Architektur bis zum laufenden Betrieb.",
+  },
 ];
 
 export default function HomePage() {
@@ -325,21 +346,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Vertrauensaufbau ─── */}
-      <section className="py-14 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {trustPoints.map((tp) => (
-              <div
-                key={tp.text}
-                className="flex items-start gap-3 p-5 rounded-xl bg-snow border border-violet/5"
-              >
-                <div className="w-9 h-9 rounded-lg bg-violet/8 flex items-center justify-center shrink-0">
-                  <tp.icon className="w-4.5 h-4.5 text-violet" />
+      {/* ─── Souveränität & Datenschutz ─── */}
+      <section className="relative py-16 bg-gradient-to-br from-midnight to-void overflow-hidden">
+        <div className="absolute inset-0 dot-grid opacity-30" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-lavender mb-3">
+              Souveränität & Datenschutz
+            </p>
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-white">
+              In Deutschland entwickelt, in Deutschland gehostet
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {sovereigntyPoints.map((point) => (
+              <div key={point.title} className="glass rounded-2xl p-6">
+                <div className="w-11 h-11 rounded-xl bg-violet/15 flex items-center justify-center mb-4">
+                  <point.icon className="w-5 h-5 text-lavender" />
                 </div>
-                <span className="text-sm font-medium text-midnight/70 leading-relaxed pt-1.5">
-                  {tp.text}
-                </span>
+                <h3 className="text-base font-semibold text-white mb-2">
+                  {point.title}
+                </h3>
+                <p className="text-sm text-white/50 leading-relaxed">
+                  {point.description}
+                </p>
               </div>
             ))}
           </div>

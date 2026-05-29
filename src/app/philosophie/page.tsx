@@ -121,11 +121,20 @@ export default function PhilosophiePage() {
                 erstellen. Gleichzeitig fehlt oft die Zeit für das, wofür alle
                 eigentlich da sind — die Patientenversorgung.
               </p>
-              <p className="text-lg text-midnight/55 leading-relaxed">
+              <p className="text-lg text-midnight/55 leading-relaxed mb-6">
                 Wir glauben, dass Technologie genau hier ansetzen muss. Nicht
                 als weiteres Programm in einer langen Liste, sondern als eine
                 durchdachte Plattform, die den gesamten Praxisalltag abbildet
                 und dort automatisiert, wo es sinnvoll ist.
+              </p>
+              <p className="text-lg text-midnight/55 leading-relaxed">
+                EmMa ist aus genau diesem Alltag heraus entstanden — entwickelt
+                in einer Arztpraxis, von einem kleinen deutschen Startup. Weil
+                wir mit hochsensiblen Patientendaten arbeiten, hat ihr Schutz
+                für uns oberste Priorität: Wir hosten ausschließlich in der
+                StackIT-Cloud in deutschen Rechenzentren und setzen auf ein
+                europäisches Sprachmodell. Datensouveränität ist für uns kein
+                Zusatz, sondern Fundament.
               </p>
             </div>
 
