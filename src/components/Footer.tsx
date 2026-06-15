@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed text-white/40 max-w-xs">
-              Prozessdigitalisierung und KI-gestützte Automatisierung
+              Prozessdigitalisierung und Automatisierung
               für moderne Arztpraxen.
             </p>
             <p className="text-xs mt-4 text-white/25">
