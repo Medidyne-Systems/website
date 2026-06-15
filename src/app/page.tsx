@@ -194,6 +194,12 @@ export default function HomePage() {
                     Gutachtenerstellung mit Hilfe von KI
                   </span>
                 </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    Zentrales Dokumenten-Management mit Volltextsuche
+                  </span>
+                </div>
               </div>
 
               {/* ─── Sub-Block: In Entwicklung ─── */}
