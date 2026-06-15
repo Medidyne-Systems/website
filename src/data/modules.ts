@@ -4,6 +4,7 @@ import {
   Users,
   Mic,
   FileCheck,
+  FileText,
   Calculator,
   CalendarDays,
   FolderOpen,
@@ -29,6 +30,12 @@ export type Module = {
   icon: LucideIcon;
   image?: StaticImageData;
   linkText?: string;
+  /** Kurz-Stichpunkt für die Startseiten-Sektion „KI-gestützte Automatisierung". */
+  homepageBullet: string;
+  /** Stichpunkt für die Startseiten-Sektion „Typische Anwendungsfälle". */
+  useCaseText: string;
+  /** Optionales Icon-Override für den Anwendungsfall (Fallback: `icon`). */
+  useCaseIcon?: LucideIcon;
 };
 
 export const modules: Module[] = [
@@ -42,6 +49,8 @@ export const modules: Module[] = [
     icon: Monitor,
     image: terminal4,
     linkText: "Weitere Details zum Terminal",
+    homepageBullet: "Digitale Patientenanmeldung per Self-Check-In",
+    useCaseText: "Digitaler Self-Check-In für Patienten",
   },
   {
     slug: "patienten-aufruf",
@@ -53,6 +62,8 @@ export const modules: Module[] = [
     icon: Users,
     image: wartezimmer,
     linkText: "Mehr zum Patienten-Aufruf",
+    homepageBullet: "Aufrufsystem über Monitor im Wartezimmer",
+    useCaseText: "Vereinfachter Wartezimmeraufruf",
   },
   {
     slug: "sprechstunden-doku",
@@ -64,6 +75,9 @@ export const modules: Module[] = [
     icon: Mic,
     image: sprechstundeDoku,
     linkText: "Mehr zur Sprechstunden-Doku",
+    homepageBullet: "KI gestützte Sprechstundendokumentation",
+    useCaseText: "Unterstützung zur Sprechstundendokumentation",
+    useCaseIcon: FileText,
   },
   {
     slug: "gutachten-erstellung",
@@ -75,6 +89,8 @@ export const modules: Module[] = [
     icon: FileCheck,
     image: gutachten,
     linkText: "Mehr zur Gutachten-Erstellung",
+    homepageBullet: "Gutachtenerstellung mit Hilfe von KI",
+    useCaseText: "Unterstützung bei der Gutachtenerstellung",
   },
   {
     slug: "dokumenten-management",
@@ -86,6 +102,8 @@ export const modules: Module[] = [
     icon: FolderOpen,
     image: dokumente,
     linkText: "Mehr zum Dokumenten-Management",
+    homepageBullet: "Zentrales Dokumenten-Management mit Volltextsuche",
+    useCaseText: "Zentrale Ablage und Suche im Dokumenten-Management",
   },
   {
     slug: "abrechnungs-optimierung",
@@ -96,6 +114,8 @@ export const modules: Module[] = [
     status: "in-development",
     icon: Calculator,
     image: abrechnung,
+    homepageBullet: "Abrechnungs-Optimierung welche individuell anpassbar ist",
+    useCaseText: "Eigens konfigurierbare Prüfung und Optimierung der Abrechnung",
   },
   {
     slug: "dienstplanung",
@@ -106,6 +126,8 @@ export const modules: Module[] = [
     status: "in-development",
     icon: CalendarDays,
     image: dienstplan,
+    homepageBullet: "Dienstplanerstellung und Management mit geringstem Aufwand",
+    useCaseText: "Hilfe bei der Dienstplanerstellung und Pflege",
   },
 ];
 

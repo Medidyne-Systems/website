@@ -7,14 +7,8 @@ import {
   RefreshCcw,
   ArrowRight,
   CheckCircle,
-  Monitor,
   Settings,
-  FileText,
-  FileCheck,
-  Users,
   Wrench,
-  Calculator,
-  CalendarDays,
   Stethoscope,
   Server,
   Cpu,
@@ -22,6 +16,7 @@ import {
 } from "lucide-react";
 import heroBg from "../../public/images/hero_bg.png";
 import terminal4 from "../../public/images/terminal_4.jpeg";
+import { availableModules, inDevelopmentModules } from "@/data/modules";
 
 const efficiencyPoints = [
   "Optimierung der Praxisabläufe durch Software und KI-Technologie",
@@ -54,18 +49,20 @@ const pillars = [
   },
 ];
 
-const availableUseCases = [
-  { icon: Monitor, text: "Digitaler Self-Check-In für Patienten" },
+// Anwendungsfall ohne eigenes Modul — manuell gepflegt.
+const extraUseCases = [
   { icon: Settings, text: "Zentrale Konfiguration von Praxis-Terminals" },
-  { icon: FileText, text: "Unterstützung zur Sprechstundendokumentation" },
-  { icon: FileCheck, text: "Unterstützung bei der Gutachtenerstellung" },
-  { icon: Users, text: "Vereinfachter Wartezimmeraufruf" },
 ];
 
-const inDevelopmentUseCases = [
-  { icon: Calculator, text: "Eigens konfigurierbare Prüfung und Optimierung der Abrechnung" },
-  { icon: CalendarDays, text: "Hilfe bei der Dienstplanerstellung und Pflege" },
+// Modul-Listen werden aus der zentralen Quelle src/data/modules.ts abgeleitet.
+const availableUseCases = [
+  ...availableModules.map((m) => ({ icon: m.useCaseIcon ?? m.icon, text: m.useCaseText })),
+  ...extraUseCases,
 ];
+const inDevelopmentUseCases = inDevelopmentModules.map((m) => ({
+  icon: m.useCaseIcon ?? m.icon,
+  text: m.useCaseText,
+}));
 
 const sovereigntyPoints = [
   {
@@ -170,36 +167,12 @@ export default function HomePage() {
               </p>
 
               <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    Digitale Patientenanmeldung per Self-Check-In
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    Aufrufsyste über Monitor im Wartezimmer
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    KI gestützte Sprechstundendokumentation
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    Gutachtenerstellung mit Hilfe von KI
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                  <span className="text-midnight/70">
-                    Zentrales Dokumenten-Management mit Volltextsuche
-                  </span>
-                </div>
+                {availableModules.map((mod) => (
+                  <div key={mod.slug} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                    <span className="text-midnight/70">{mod.homepageBullet}</span>
+                  </div>
+                ))}
               </div>
 
               {/* ─── Sub-Block: In Entwicklung ─── */}
@@ -209,18 +182,12 @@ export default function HomePage() {
                   In Entwicklung
                 </div>
                 <div className="space-y-2">
-                  <div className="flex items-start gap-3">
-                    <Wrench className="w-5 h-5 text-mauve shrink-0 mt-0.5" />
-                    <span className="text-midnight/70">
-                      Abrechnungs-Optimierung welche individuell anpassbar ist
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Wrench className="w-5 h-5 text-mauve shrink-0 mt-0.5" />
-                    <span className="text-midnight/70">
-                      Dienstplanerstellung und Management mit geringstem Aufwand
-                    </span>
-                  </div>
+                  {inDevelopmentModules.map((mod) => (
+                    <div key={mod.slug} className="flex items-start gap-3">
+                      <Wrench className="w-5 h-5 text-mauve shrink-0 mt-0.5" />
+                      <span className="text-midnight/70">{mod.homepageBullet}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
