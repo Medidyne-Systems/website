@@ -6,19 +6,19 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoMedidyne from "../../public/images/logo_medidyne.png";
+import { availableModules } from "@/data/modules";
+
 const navItems = [
   { label: "Startseite", href: "/" },
   { label: "Philosophie", href: "/philosophie" },
   {
     label: "KI Lösungen",
     href: "/ki-loesungen",
-    children: [
-      { label: "Self-Check-In Terminal", href: "/ki-loesungen/self-check-in" },
-      { label: "Patienten-Aufruf", href: "/ki-loesungen/patienten-aufruf" },
-      { label: "Sprechstunden-Dokumentation", href: "/ki-loesungen/sprechstunden-doku" },
-      { label: "Gutachten-Erstellung", href: "/ki-loesungen/gutachten-erstellung" },
-      { label: "Dokumenten-Management", href: "/ki-loesungen/dokumenten-management" },
-    ],
+    // Dropdown wird aus der zentralen Quelle src/data/modules.ts abgeleitet.
+    children: availableModules.map((m) => ({
+      label: m.displayName,
+      href: `/ki-loesungen/${m.slug}`,
+    })),
   },
   { label: "Roadmap", href: "/roadmap" },
 ];
