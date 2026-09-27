@@ -39,10 +39,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Claude Code (Entwicklungs-Werkzeuge, nicht Teil der Software)
-.claude/
-Team/
-CLAUDE.md
+# Claude Code — CLAUDE.md, Team/ und .claude/agents/ sind bewusst getrackt (für alle Maintainer);
+# lokal bzw. persönlich bleiben nur diese:
+.claude/settings.local.json
+.claude/worktrees/
+.claude/skills/
 tmpclaude-*
 
 # Kommunikation User <-> Claude (lokal, nicht ins Repo)

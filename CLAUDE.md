@@ -3,30 +3,32 @@
 ## Projekt-Übersicht
 Website für die **Medidyne Systems GmbH** (Marke: EmMa.AI) — KI-Lösungen für Arztpraxen.
 
-- **Produktion (alt):** https://www.medidyne-systems.de/ (noch auf Hostinger, soll abgelöst werden)
-- **Preview (neu):** https://fuchs-medidyne.github.io/website/ (GitHub Pages, automatisches Deploy)
+- **Produktion:** https://www.medidyne-systems.de/ (GitHub Pages mit Custom Domain, automatisches Deploy bei Push auf `main`; `medidyne-systems.github.io/website/` leitet dorthin weiter)
+- **Repo:** `Medidyne-Systems/website` (Org-Repo)
 
-Die Website beschreibt inhaltlich das Produkt **EMMA-StackIt_dev** (siehe nächster Abschnitt).
+Die Website beschreibt inhaltlich das Produkt **EMMA** (siehe nächster Abschnitt).
 
-## Inhaltliche Quelle: EMMA-StackIt_dev
+## Inhaltliche Quelle: EMMA-Produktivstand
 
-Die Website bewirbt EMMA — die Multi-Tenant-KI-Plattform für Arztpraxen, die parallel im Schwesterprojekt entwickelt wird. Wenn auf der Website Funktionen, Module oder Versprechen formuliert werden, müssen sie zur tatsächlichen Software passen.
+Die Website bewirbt EMMA — die Multi-Tenant-KI-Plattform für Arztpraxen. Wenn auf der Website Funktionen, Module oder Versprechen formuliert werden, müssen sie zur **produktiv ausgelieferten** Software passen — nicht zum Entwicklungsstand (`dev`).
 
-**Pfad relativ zur Website:** `../-=EMMA-StackIt_dev=-/`
+**Maßgeblich ist der Pro-Server `emmacloud.ai`, der die Produktiv-Branches der Org `Medidyne-Systems` ausrollt** (siehe `emma-workway/docs/CLOUD-DEPLOY.md`; Tags `deploy/*` markieren Cloud-DEV, nicht Pro):
 
-Wann dort nachschauen:
+| Repo | Produktiv-Branch | Inhalt |
+|------|------------------|--------|
+| `emma-frontend` | `main` | React-UI, Handbuch |
+| `emma-backend` | `master` | FastAPI-Endpunkte/Funktionen |
+| `emma-workway` | `main` | Pläne (inkl. `_abgeschlossen`), Architektur-/Prozess-Doku |
+| `emma-local`, `emma-wartezimmer`, `emma-admin` | `main` | Praxis-lokaler Client, Wartezimmer-Screen, Admin/Support |
+
+Zugriff: `gh` (Lesezugriff über den Org-Account) — z. B. Shallow-Clone des Produktiv-Branches ins Scratchpad oder `gh api`. Die lokalen Klone unter `../-=EMMA-StackIt_dev=-/` zeigen auf alte Remotes und sind **nicht** maßgeblich.
+
+Wann nachschauen:
 - **Feature-Beschreibungen prüfen:** Bevor neue Texte zu KI-Modulen geschrieben werden.
 - **Modul-Namen / -Funktionen verifizieren:** Damit auf der Website nichts versprochen wird, was es nicht gibt.
 - **Neue Module recherchieren:** Falls eine neue KI-Lösung auf der Website angelegt werden soll.
 
-Wichtige Anlaufstellen dort:
-- `../-=EMMA-StackIt_dev=-/CLAUDE.md` — Projekt-Übersicht und Stack
-- `../-=EMMA-StackIt_dev=-/workway/Plaene/EMMA-StackIt_dev/` — aktuelle und abgeschlossene Pläne (zeigen, was wirklich gebaut ist/wird)
-- `../-=EMMA-StackIt_dev=-/workway/docs/` — Architektur- und Prozess-Doku
-- `../-=EMMA-StackIt_dev=-/emma-frontend/` — React-Code (zeigt das tatsächliche UI)
-- `../-=EMMA-StackIt_dev=-/emma-backend/` — FastAPI-Code (zeigt die tatsächlichen Endpunkte/Funktionen)
-
-**Nur lesen, nicht editieren.** Änderungen am Produkt passieren ausschließlich im EMMA-StackIt_dev-Workflow, nie aus der Website-Session heraus.
+**Nur lesen, nicht editieren.** Änderungen am Produkt passieren ausschließlich im EMMA-Workflow, nie aus der Website-Session heraus.
 
 ## Tech-Stack
 - **Framework:** Next.js 16 (App Router, `src/app/` Verzeichnisstruktur)
@@ -143,27 +145,29 @@ npm run lint     # ESLint
 
 ## Workflow
 
-Lokal entwickeln → Review durch User → erst dann Push. Push ist die einzige Außenwirkung; bis dahin ist alles reversibel.
+**Variante (b) — Feature-Branch + Pull Request** (seit 2026-09-27; mehrere Maintainer im Org-Repo).
+Der Merge in `main` ist die einzige Außenwirkung (triggert das Auto-Deploy) und liegt immer beim User.
 
 | Schritt | Wer | Was |
 |---------|-----|-----|
-| 1. Edit | Claude | Änderungen lokal an Dateien |
-| 2. Build-Check | Claude | `npm run build` muss grün sein |
-| 3. Review | User | `npm run dev` → im Browser anschauen, Feedback geben |
-| 4. Iteration | beide | Anpassungen bis User zufrieden ist |
-| 5. Commit | Claude (auf User-OK) | Commit mit aussagekräftiger Message |
-| 6. Push | Claude (nur auf explizites "push") | Erst auf User-Wort — triggert das Auto-Deploy |
+| 1. Branch | Claude | `git switch main && git pull --ff-only`, dann `git switch -c <typ>/<thema>` (z. B. `content/…`, `fix/…`, `chore/…`) |
+| 2. Edit | Claude | Änderungen lokal an Dateien |
+| 3. Build-Check | Claude | `npm run build` muss grün sein |
+| 4. Review | User | `npm run dev` → im Browser anschauen, Feedback geben |
+| 5. Iteration | beide | Anpassungen bis User zufrieden ist |
+| 6. Commit | Claude (auf User-OK) | Commit mit aussagekräftiger Message |
+| 7. Push + PR | Claude (auf User-OK) | Feature-Branch pushen, PR gegen `main` öffnen (`gh pr create`) |
+| 8. CI | GitHub | Workflow `CI` baut den PR — muss grün sein |
+| 9. Merge | User | PR auf GitHub mergen → Auto-Deploy |
 
-**Push-Variante (aktuell): Variante (a) — direkt nach `main`.**
-Branch nach `main` mergen, dann `main` pushen → GitHub-Actions deployen automatisch. Pragmatisch für einen Maintainer.
-
-**Wechsel zu Variante (b) — Branch + PR — sobald die Website komplexer wird** (mehrere Maintainer, parallele Features, größere Umbauten).
+**Branch-Schutz auf `main`:** PR-Pflicht (0 Approvals, Self-Merge erlaubt), Status-Check `build` muss grün sein, gilt auch für Admins, kein Force-Push, kein Löschen. Direktes Pushen auf `main` ist damit für alle gesperrt.
 
 ### Git-Regeln
 - Commit-Messages auf Englisch, kurz und prägnant
 - Neue Features/Änderungen als eigene Commits (nicht amenden)
 - Vor dem Commit immer `npm run build` erfolgreich durchlaufen lassen
-- Niemals ungefragt pushen — auch nicht "weil der Build grün ist"
+- Nie direkt auf `main` committen oder pushen — immer Feature-Branch + PR
+- Feature-Branch nur auf User-OK pushen; PRs nie selbst mergen
 
 ## Team (optional)
 Im Verzeichnis `Team/` liegen drei Agent-Profile (`web-leiter`, `web-architekt`, `web-rollen`). Sie sind für größere strukturelle oder architektonische Aufgaben gedacht. Für reine Inhalts-, Text- oder Bild-Edits ist direkte Arbeit ohne Delegation der Normalfall.
