@@ -12,6 +12,7 @@ import {
   Upload,
   EyeOff,
   Share2,
+  BookOpen,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
@@ -51,6 +52,11 @@ const features = [
     icon: Pill,
     title: "Medikationsplan",
     description: "Diktieren Sie das Stichwort „Medikationsplan“, und die KI trägt die genannten Medikamente in eine editierbare Tabelle ein — als PDF exportierbar, unsichere Zeilen sind markiert.",
+  },
+  {
+    icon: BookOpen,
+    title: "ICD-Code aus dem amtlichen Katalog",
+    description: "Zur Diagnose wählen Sie den passenden Code aus dem ICD-10-GM-Katalog des BfArM — die Suche versteht auch Kürzel und Alltagsbegriffe. Die KI stellt dabei selbst keine Diagnosen, sie gibt nur wieder, was gesagt wurde.",
   },
   {
     icon: Smartphone,

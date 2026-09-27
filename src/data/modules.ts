@@ -22,6 +22,7 @@ import gutachten from "../../public/images/gutachten.jpg";
 import dokumente from "../../public/images/dokumente.jpg";
 import abrechnung from "../../public/images/abrechnung.jpg";
 import dienstplan from "../../public/images/dienstplan.jpg";
+import kommunikation from "../../public/images/kommunikation.jpg";
 
 export type ModuleStatus = "available" | "in-development" | "planned";
 
@@ -88,7 +89,7 @@ export const modules: Module[] = [
     displayName: "Schreibplatz",
     internalName: "Schreibplatz",
     description:
-      "KI-unterstützte Erstellung von Gutachten, Arztbriefen, Attesten und Formularen. Auftrag diktieren oder tippen, Unterlagen dazulegen — die KI erkennt selbst, welches Schriftstück gebraucht wird, und liefert den Entwurf zur Freigabe.",
+      "KI-unterstützte Erstellung von Gutachten, Arztbriefen und Attesten. Auftrag diktieren oder tippen, Unterlagen dazulegen — die KI erkennt selbst, welches Schriftstück gebraucht wird, und liefert den Entwurf zur Freigabe.",
     status: "available",
     icon: FileCheck,
     image: gutachten,
@@ -126,10 +127,11 @@ export const modules: Module[] = [
     displayName: "Dienstplanung",
     internalName: "Dienstplanung",
     description:
-      "Intelligente Schicht- und Urlaubsplanung für das gesamte Team — standortübergreifend und fair, mit automatischem Dienstplan-Generator.",
-    status: "in-development",
+      "Schicht- und Urlaubsplanung für das gesamte Team: Der Wochenplan entsteht automatisch nach Bedarf und fairer Verteilung, die Mindestbesetzung bleibt im Blick, und bei Ausfällen schlägt EmMa passenden Ersatz vor.",
+    status: "available",
     icon: CalendarDays,
     image: dienstplan,
+    linkText: "Mehr zur Dienstplanung",
     homepageBullet: "Dienstplanerstellung und Management mit geringstem Aufwand",
     useCaseText: "Hilfe bei der Dienstplanerstellung und Pflege",
   },
@@ -138,9 +140,11 @@ export const modules: Module[] = [
     displayName: "Kommunikation",
     internalName: "Kommunikation",
     description:
-      "Nachrichten an Patienten direkt aus der Praxis heraus — Befund liegt vor, Bitte um Rückruf, Terminhinweis. Ausgelöst per Knopfdruck aus Ihrem Praxissystem oder manuell, versendet als E-Mail mit Anschreiben im Praxis-Briefkopf.",
-    status: "in-development",
+      "Nachrichten an Patienten direkt aus der Praxis heraus — Befund liegt vor, Bitte um Rückruf, Terminhinweis. Ausgelöst per Knopfdruck aus Ihrem Praxissystem oder manuell, versendet als E-Mail mit Anschreiben im Praxis-Briefkopf. Der Versand wird an Ihr Praxissystem zurückgemeldet.",
+    status: "available",
     icon: MessageSquare,
+    image: kommunikation,
+    linkText: "Mehr zur Kommunikation",
     homepageBullet: "Patientennachrichten direkt aus der Praxis versenden",
     useCaseText: "Patienten benachrichtigen ohne Umweg über Fremdsysteme",
   },
@@ -149,7 +153,7 @@ export const modules: Module[] = [
     displayName: "Zeiterfassung",
     internalName: "Zeiterfassung",
     description:
-      "Rechtskonforme Arbeitszeiterfassung für das Praxisteam: Kommen, Pause und Gehen per Klick, Tages- und Wochensaldo gegen die vereinbarte Arbeitszeit, Freigabe von Überstunden durch die Praxisleitung.",
+      "Rechtskonforme Arbeitszeiterfassung für das Praxisteam: Kommen und Gehen per Klick oder Chip am Check-In-Terminal, gesetzliche Mindestpausen automatisch berücksichtigt, Tages- und Wochensaldo, Freigabe von Überstunden durch die Praxisleitung und Stundennachweis als PDF.",
     status: "in-development",
     icon: Clock,
     homepageBullet: "Rechtskonforme Arbeitszeiterfassung für das Team",

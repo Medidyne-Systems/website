@@ -21,11 +21,7 @@ const plannedFeatures = [
   },
   {
     module: "Schreibplatz",
-    text: "Amtliche Formulare direkt ausfüllen, statt sie als strukturierten Text auszugeben. Dazu ein gemeinsames Adressbuch für wiederkehrende Empfänger — Adresse und Anrede werden automatisch übernommen.",
-  },
-  {
-    module: "Self-Check-In · Patienten-Aufruf",
-    text: "Mehrere Terminals und Wartezimmer je Standort getrennt verwalten — und einen Aufruf gezielt an ein bestimmtes Wartezimmer schicken statt an alle.",
+    text: "Amtliche Formulare direkt ausfüllen, statt sie als strukturierten Text auszugeben.",
   },
   {
     module: "Sprechstunden-Dokumentation",
@@ -37,11 +33,7 @@ const plannedFeatures = [
   },
   {
     module: "Abrechnungs-Optimierung",
-    text: "Prüfzeiten aus dem KBV-Stammdatensatz, damit die Plausibilitätsprüfung nach §106d vollständig greift. Dazu eine zweite Datenquelle für Fälle und Freitexte, die in der KVDT-Datei nicht enthalten sind.",
-  },
-  {
-    module: "Alle Module",
-    text: "Startseite, die sich jeder Mitarbeiter aus den für ihn freigegebenen Kacheln selbst zusammenstellt.",
+    text: "Eine zweite Datenquelle für Fälle und Freitexte, die in der KVDT-Datei nicht enthalten sind.",
   },
 ];
 
@@ -130,7 +122,7 @@ export default function RoadmapPage() {
               Geplant
             </h2>
             <p className="mt-3 text-base text-midnight/55 max-w-2xl mx-auto">
-              Module, die wir als nächstes angehen wollen.
+              Module, die wir fest vorgesehen haben.
             </p>
           </div>
 
@@ -175,7 +167,7 @@ export default function RoadmapPage() {
               Weitere geplante Funktionen
             </h2>
             <p className="mt-3 text-base text-midnight/55 max-w-2xl mx-auto">
-              Erweiterungen bestehender Module, an denen wir als nächstes arbeiten.
+              Erweiterungen bestehender Module, die wir fest vorgesehen haben.
             </p>
           </div>
 

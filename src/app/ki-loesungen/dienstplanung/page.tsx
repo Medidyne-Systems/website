@@ -2,61 +2,67 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  Tv,
-  LinkIcon,
-  Volume2,
-  UserPlus,
-  DoorOpen,
-  RefreshCw,
-  Film,
+  Wand2,
+  Scale,
+  ShieldAlert,
+  UserX,
+  Sparkles,
+  Palmtree,
+  BarChart3,
+  Smartphone,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
-  title: "Patienten-Aufruf",
+  title: "Dienstplanung",
   description:
-    "Intelligentes Wartezimmer-Management mit digitalem Aufruf-System für Arztpraxen.",
+    "Schicht- und Urlaubsplanung für das Praxisteam — automatischer Wochenplan, faire Verteilung, Mindestbesetzung und Ersatz-Vorschläge.",
 };
 
 const features = [
   {
-    icon: Tv,
-    title: "Digitaler Aufruf",
-    description: "Patienten werden über Bildschirme im Wartezimmer aufgerufen — organisiert, diskret und ohne lautes Rufen am Empfang.",
+    icon: Wand2,
+    title: "Wochenplan auf Knopfdruck",
+    description: "EmMa baut den Wochenplan nach dem Bedarf jeder Aufgabe. Pflicht-Aufgaben werden zuerst besetzt, von Hand eingetragene Dienste bleiben stehen.",
   },
   {
-    icon: LinkIcon,
-    title: "Integration",
-    description: "Nahtlose Verbindung mit dem Self-Check-In Terminal — wer sich dort angemeldet hat, erscheint automatisch in der Liste der eingecheckten Patienten.",
+    icon: Scale,
+    title: "Faire Verteilung",
+    description: "Wie oft jemand welche Aufgabe hat, richtet sich nach der verfügbaren Vertragszeit — eine Halbtagskraft bekommt etwa halb so viele Dienste wie eine Vollzeitkraft.",
   },
   {
-    icon: Volume2,
-    title: "Sprachansage",
-    description: "Zum Aufruf auf dem Bildschirm kommt eine gesprochene Ansage. Der Ansagetext lässt sich je Ziel hinterlegen, damit der Satz grammatisch stimmt — „ins Labor“, „zur Sonographie 1“.",
+    icon: ShieldAlert,
+    title: "Mindestbesetzung im Blick",
+    description: "Unbesetzte Pflicht-Dienste sind im Plan markiert. Wer einen Dienst löscht oder Urlaub genehmigt und dadurch eine Lücke reißt, wird vorher gewarnt.",
   },
   {
-    icon: UserPlus,
-    title: "Aufruf ohne Praxissystem",
-    description: "Patienten lassen sich auch direkt in EmMa aufrufen: Anrede, Name und Zielzimmer eintragen, fertig. Aufrufe aus Ihrem Praxissystem laufen unverändert daneben.",
+    icon: UserX,
+    title: "Ausfall und Ersatz",
+    description: "Krankmeldung oder Urlaub für einen Zeitraum eintragen — EmMa zeigt vorher, welche Dienste frei werden, und schlägt verfügbare Kolleginnen und Kollegen als Ersatz vor.",
   },
   {
-    icon: DoorOpen,
-    title: "Frei definierbare Ziele",
-    description: "Behandlungszimmer, Labor, EKG — Aufruf-Ziele legen Sie selbst an und sortieren sie per Drag & Drop. Je Ziel ist ein Kürzel hinterlegbar, auf das Ihr Praxissystem direkt auslösen kann.",
+    icon: Sparkles,
+    title: "Regeln in einem Satz",
+    description: "Planungsregeln beschreiben Sie in Alltagssprache, die KI macht daraus eine Regel zum Prüfen und Übernehmen. Namen der Mitarbeiter gehen dabei nie an die KI.",
   },
   {
-    icon: RefreshCw,
-    title: "Läuft durch",
-    description: "Der Bildschirm erholt sich selbstständig von Netzausfällen und Updates und überspringt ein defektes Einzelmedium. Auch nach vielen Stunden Dauerbetrieb ist kein Neustart von Hand nötig.",
+    icon: Palmtree,
+    title: "Urlaubsplanung",
+    description: "Jahreskalender für das ganze Team, Urlaubskonto mit Resturlaub und halben Tagen, Feiertage je Bundesland. Urlaubsanträge werden in EmMa gestellt und genehmigt.",
   },
   {
-    icon: Film,
-    title: "Eigene Inhalte",
-    description: "Zwischen den Aufrufen zeigt der Bildschirm Ihre eigenen Bilder und Filme — Reihenfolge per Drag & Drop, Formate werden schon beim Hochladen geprüft. Änderungen erscheinen sofort am Bildschirm.",
+    icon: BarChart3,
+    title: "Auswertungen",
+    description: "Urlaub, Krankheitstage und Aufgaben je Person auf einen Blick — dazu die Auslastung: geplante Stunden gegen das vertragliche Soll.",
+  },
+  {
+    icon: Smartphone,
+    title: "Meine Dienste unterwegs",
+    description: "Jeder im Team sieht seine eigenen Dienste — auch auf dem Handy, wo sich EmMa wie eine App installieren lässt.",
   },
 ];
 
-export default function PatientenAufrufPage() {
+export default function DienstplanungPage() {
   return (
     <>
       <section className="relative h-[280px] overflow-hidden">
@@ -66,13 +72,13 @@ export default function PatientenAufrufPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
           <div className="hero-backdrop-module px-8 py-5">
             <p className="module-label text-base font-semibold uppercase tracking-widest text-white mb-3">
-              EmMa Modul · Wartezimmer
+              EmMa Modul · Dienstplanung
             </p>
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
-              Patienten-Aufruf
+              Dienstplanung
             </h1>
             <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
-              Digitales Aufruf-System für ein ruhiges Wartezimmer.
+              Schicht- und Urlaubsplanung, die fair verteilt und Lücken früh zeigt.
             </p>
           </div>
         </div>
@@ -85,9 +91,8 @@ export default function PatientenAufrufPage() {
           <div className="text-center mb-10">
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">Funktionen</h2>
             <p className="mt-4 text-base text-midnight/60 leading-relaxed max-w-2xl mx-auto">
-              Steuern Sie den Patientenfluss effizient mit einem digitalen Aufruf-System.
-              Patienten werden über Bildschirme im Wartezimmer aufgerufen — organisiert,
-              diskret und ohne lautes Rufen am Empfang.
+              Der Dienstplan entsteht nicht mehr in der Tabellenkalkulation, sondern dort, wo auch
+              Urlaub, Krankheit und Arbeitszeiten liegen — und rechnet mit, statt nur zu speichern.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -107,7 +112,7 @@ export default function PatientenAufrufPage() {
       <section className="py-14 bg-snow">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="font-display text-2xl tracking-tight text-midnight mb-4">Interesse?</h2>
-          <p className="text-base text-midnight/50 mb-8">Wir zeigen Ihnen gerne, wie der digitale Patienten-Aufruf in Ihrer Praxis funktioniert.</p>
+          <p className="text-base text-midnight/50 mb-8">Wir zeigen Ihnen gerne, wie die Dienstplanung in Ihrer Praxis funktioniert.</p>
           <Link href="/kontakt" className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-7 py-3.5 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.3)]">
             Demo anfragen <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>

@@ -2,61 +2,55 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
-  Tv,
-  LinkIcon,
-  Volume2,
-  UserPlus,
-  DoorOpen,
-  RefreshCw,
-  Film,
+  Send,
+  Mail,
+  FileText,
+  RotateCcw,
+  ShieldCheck,
+  History,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
-  title: "Patienten-Aufruf",
+  title: "Kommunikation",
   description:
-    "Intelligentes Wartezimmer-Management mit digitalem Aufruf-System für Arztpraxen.",
+    "Patientennachrichten direkt aus der Praxis — per Knopfdruck aus dem Praxissystem, als E-Mail mit Briefkopf-PDF und Rückmeldung in die Akte.",
 };
 
 const features = [
   {
-    icon: Tv,
-    title: "Digitaler Aufruf",
-    description: "Patienten werden über Bildschirme im Wartezimmer aufgerufen — organisiert, diskret und ohne lautes Rufen am Empfang.",
+    icon: Send,
+    title: "Per Knopfdruck aus dem Praxissystem",
+    description: "Ein Knopf in Ihrem Praxissystem übergibt den Patienten über die GDT-Schnittstelle an EmMa. Der Auftrag liegt dann in einer Warteliste bereit.",
   },
   {
-    icon: LinkIcon,
-    title: "Integration",
-    description: "Nahtlose Verbindung mit dem Self-Check-In Terminal — wer sich dort angemeldet hat, erscheint automatisch in der Liste der eingecheckten Patienten.",
+    icon: Mail,
+    title: "Auch ohne Praxissystem",
+    description: "Name und E-Mail-Adresse von Hand eintragen, Textbaustein wählen, senden — unabhängig davon, ob der Knopf schon eingerichtet ist.",
   },
   {
-    icon: Volume2,
-    title: "Sprachansage",
-    description: "Zum Aufruf auf dem Bildschirm kommt eine gesprochene Ansage. Der Ansagetext lässt sich je Ziel hinterlegen, damit der Satz grammatisch stimmt — „ins Labor“, „zur Sonographie 1“.",
+    icon: FileText,
+    title: "Mit Ihrem Briefkopf",
+    description: "Jede Nachricht geht als E-Mail mit Textbaustein hinaus und trägt dasselbe Schreiben als PDF auf Ihrem Praxis-Briefbogen.",
   },
   {
-    icon: UserPlus,
-    title: "Aufruf ohne Praxissystem",
-    description: "Patienten lassen sich auch direkt in EmMa aufrufen: Anrede, Name und Zielzimmer eintragen, fertig. Aufrufe aus Ihrem Praxissystem laufen unverändert daneben.",
+    icon: RotateCcw,
+    title: "Rückmeldung in die Akte",
+    description: "Nach dem Versand meldet EmMa an Ihr Praxissystem zurück — mit Kurzeintrag und dem versendeten Schreiben als PDF in der Patientenakte.",
   },
   {
-    icon: DoorOpen,
-    title: "Frei definierbare Ziele",
-    description: "Behandlungszimmer, Labor, EKG — Aufruf-Ziele legen Sie selbst an und sortieren sie per Drag & Drop. Je Ziel ist ein Kürzel hinterlegbar, auf das Ihr Praxissystem direkt auslösen kann.",
+    icon: ShieldCheck,
+    title: "Kein doppelter Versand",
+    description: "Ein zweiter Knopfdruck landet im selben Auftrag, ein wiederholter Versuch nach einem Fehler erzeugt keine zweite Nachricht.",
   },
   {
-    icon: RefreshCw,
-    title: "Läuft durch",
-    description: "Der Bildschirm erholt sich selbstständig von Netzausfällen und Updates und überspringt ein defektes Einzelmedium. Auch nach vielen Stunden Dauerbetrieb ist kein Neustart von Hand nötig.",
-  },
-  {
-    icon: Film,
-    title: "Eigene Inhalte",
-    description: "Zwischen den Aufrufen zeigt der Bildschirm Ihre eigenen Bilder und Filme — Reihenfolge per Drag & Drop, Formate werden schon beim Hochladen geprüft. Änderungen erscheinen sofort am Bildschirm.",
+    icon: History,
+    title: "Versand nachvollziehbar",
+    description: "Die Historie zeigt, was die Praxis wann an wen verschickt hat. Antworten der Patienten gehen direkt an den Absender, nicht in die Sammeladresse.",
   },
 ];
 
-export default function PatientenAufrufPage() {
+export default function KommunikationPage() {
   return (
     <>
       <section className="relative h-[280px] overflow-hidden">
@@ -66,13 +60,13 @@ export default function PatientenAufrufPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
           <div className="hero-backdrop-module px-8 py-5">
             <p className="module-label text-base font-semibold uppercase tracking-widest text-white mb-3">
-              EmMa Modul · Wartezimmer
+              EmMa Modul · Kommunikation
             </p>
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
-              Patienten-Aufruf
+              Kommunikation
             </h1>
             <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
-              Digitales Aufruf-System für ein ruhiges Wartezimmer.
+              Patienten benachrichtigen, ohne das Praxissystem zu verlassen.
             </p>
           </div>
         </div>
@@ -85,9 +79,8 @@ export default function PatientenAufrufPage() {
           <div className="text-center mb-10">
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">Funktionen</h2>
             <p className="mt-4 text-base text-midnight/60 leading-relaxed max-w-2xl mx-auto">
-              Steuern Sie den Patientenfluss effizient mit einem digitalen Aufruf-System.
-              Patienten werden über Bildschirme im Wartezimmer aufgerufen — organisiert,
-              diskret und ohne lautes Rufen am Empfang.
+              Befund liegt vor, Bitte um Rückruf, Terminhinweis — Nachrichten an Patienten gehen per
+              E-Mail direkt aus der Praxis hinaus, der Nachweis landet in der Akte.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -107,7 +100,7 @@ export default function PatientenAufrufPage() {
       <section className="py-14 bg-snow">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="font-display text-2xl tracking-tight text-midnight mb-4">Interesse?</h2>
-          <p className="text-base text-midnight/50 mb-8">Wir zeigen Ihnen gerne, wie der digitale Patienten-Aufruf in Ihrer Praxis funktioniert.</p>
+          <p className="text-base text-midnight/50 mb-8">Wir zeigen Ihnen gerne, wie die Patientenkommunikation in Ihrer Praxis funktioniert.</p>
           <Link href="/kontakt" className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-7 py-3.5 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.3)]">
             Demo anfragen <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>

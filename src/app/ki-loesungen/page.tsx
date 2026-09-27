@@ -13,6 +13,7 @@ import {
   Building2,
   Palette,
   Smartphone,
+  type LucideIcon,
 } from "lucide-react";
 import heroBg from "../../../public/images/hero_bg.png";
 import { availableModules, inDevelopmentModules } from "@/data/modules";
@@ -32,7 +33,12 @@ const saasPoints = [
 
 // Modulübergreifende Eigenschaften der Plattform. `inDevelopment` markiert Punkte,
 // die noch nicht ausgeliefert sind.
-const platformPoints = [
+const platformPoints: {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  inDevelopment?: boolean;
+}[] = [
   {
     icon: Plug,
     title: "Anbindung an Ihr Praxissystem",
@@ -49,7 +55,7 @@ const platformPoints = [
     icon: KeyRound,
     title: "Zwei-Faktor-Anmeldung",
     description:
-      "Der Zugang lässt sich zusätzlich zum Passwort über einen Code aus der Authenticator-App absichern. Nach mehreren Fehlversuchen greift eine automatische Sperre.",
+      "Jeder Zugang ist zusätzlich zum Passwort über einen Code aus der Authenticator-App abgesichert — verpflichtend für alle Konten. Nach mehreren Fehlversuchen greift eine automatische Sperre.",
   },
   {
     icon: Building2,
@@ -68,7 +74,6 @@ const platformPoints = [
     title: "Als App installierbar",
     description:
       "EmMa lässt sich auf Handy und Rechner wie eine eigenständige App installieren — praktisch für alles, was man unterwegs kurz aufruft.",
-    inDevelopment: true,
   },
 ];
 
