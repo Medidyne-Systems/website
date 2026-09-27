@@ -33,8 +33,8 @@ const features = [
   },
   {
     icon: Printer,
-    title: "Faxeingang ohne Papier",
-    description: "Ihr Faxgerät legt eingehende Sendungen direkt als PDF in EmMa ab, statt sie auszudrucken — von dort laufen sie durch dieselbe Zuordnung wie alle anderen Dokumente.",
+    title: "Eingang ohne Papier",
+    description: "Was Scanner oder Faxgerät als PDF in einen Praxis-Ordner ablegen, übernimmt EmMa automatisch — von dort läuft es durch dieselbe Zuordnung wie alle anderen Dokumente.",
   },
   {
     icon: Tag,

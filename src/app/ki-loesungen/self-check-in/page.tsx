@@ -75,14 +75,14 @@ const techFeatures = [
       "Digitale Selbstanmeldung am Terminal",
       "Geführte Navigation durch den Check-In-Prozess",
       "Anpassbare Inhalte und Formulare",
-      "Avatar- und Sprachnavigation für Barrierearmut",
+      "Avatar mit Sprachausgabe für Barrierearmut",
     ],
   },
   {
     category: "Benutzer- & Rollenverwaltung",
     icon: Users,
     items: [
-      "Mehrstufiges Rollenmodell (Administrator, Arzt, MFA)",
+      "Frei anlegbare Rollen statt starrer Vorgaben",
       "Zentrale Benutzerverwaltung",
       "Individuelle Berechtigungen pro Rolle",
       "Sichere Authentifizierung",
@@ -103,7 +103,7 @@ const techFeatures = [
     icon: Shield,
     items: [
       "Touch-optimiertes User Interface",
-      "Avatar- und Sprachnavigation",
+      "Avatar mit Sprachausgabe",
       "Fokus auf Barrierearmut",
       "Responsive Design für verschiedene Bildschirmgrößen",
     ],

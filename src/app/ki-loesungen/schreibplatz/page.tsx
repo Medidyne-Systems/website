@@ -11,13 +11,15 @@ import {
   Mic,
   Mail,
   Stamp,
+  BookUser,
+  PenLine,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
   title: "Schreibplatz",
   description:
-    "KI-unterstützte Erstellung medizinischer Schriftstücke — Gutachten, Arztbriefe, Atteste und Formulare aus einem Diktat.",
+    "KI-unterstützte Erstellung medizinischer Schriftstücke — Gutachten, Arztbriefe und Atteste aus einem Diktat.",
 };
 
 const features = [
@@ -34,12 +36,12 @@ const features = [
   {
     icon: Layers,
     title: "Verschiedene Kategorien",
-    description: "Gutachten, Atteste und Arztbriefe — wählen Sie die passende Kategorie oder erstellen Sie eigene Vorlagen.",
+    description: "Gutachten, Atteste und Arztbriefe arbeiten mit einer geprüften KI-Vorlage. Eigene Dokumentarten mit eigener Bauanleitung legen Sie selbst an.",
   },
   {
     icon: Sparkles,
     title: "Erkennt selbst, was gebraucht wird",
-    description: "Sie müssen nichts vorsortieren: Aus Ihrem Auftrag und den beigelegten Unterlagen erkennt EmMa, ob ein Gutachten, ein Arztbrief, ein Attest oder ein Formular entstehen soll.",
+    description: "Sie müssen nichts vorsortieren: Aus Ihrem Auftrag und den beigelegten Unterlagen erkennt EmMa, ob ein Gutachten, ein Arztbrief oder ein Attest entstehen soll. Formularangaben liefert die KI als strukturierten Text zum Übertragen.",
   },
   {
     icon: Mic,
@@ -57,14 +59,24 @@ const features = [
     description: "Eigene Briefköpfe mit Adressblock, Fußtext und Logo hinterlegen und je Schriftstück auswählen — oder schlicht ohne Kopf exportieren.",
   },
   {
+    icon: BookUser,
+    title: "Gemeinsames Adressbuch",
+    description: "Empfänger pflegt die Praxis einmal zentral. Nennt Ihr Auftrag einen bekannten Namen, übernimmt EmMa die vollständige Postanschrift in den Brief.",
+  },
+  {
+    icon: PenLine,
+    title: "Signatur und Mitzeichnung",
+    description: "Jedes PDF schließt mit der Signatur des Verfassers, auf Wunsch mit Unterschriftsbild und Mitzeichnern wie Ober- oder Chefarzt daneben.",
+  },
+  {
     icon: FileCheck,
     title: "Nachbearbeitung",
     description: "Jeder Entwurf kann vor der Freigabe überprüft und angepasst werden — die KI liefert die Basis, Sie behalten die Kontrolle.",
   },
   {
     icon: History,
-    title: "Job-Historie",
-    description: "Alle erstellten Dokumente werden versioniert gespeichert. Filtern Sie nach Status, Kategorie oder Datum.",
+    title: "Archiv",
+    description: "Alle erstellten Schriftstücke in einer chronologischen Liste, nach Dokumenttyp filterbar. Der freigegebene Text wird beim Speichern festgeschrieben.",
   },
 ];
 
