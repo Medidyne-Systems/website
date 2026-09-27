@@ -7,6 +7,9 @@
 - [ ] Kontaktformular mit echtem Backend verbinden (aktuell mailto-Button; Plan Cloudflare Workers liegt vor — zurückgestellt, Stand 2026-09-27)
 - [ ] Modul-Detailseiten mit Screenshots / Produkt-Bildern ergänzen
 - [ ] Feedback der Kollegen einarbeiten
+- [ ] Kollegen (MaximilianPfister, schindlerb) über neuen PR-Workflow + Branch-Schutz informieren
+- [ ] Zeiterfassung auf „verfügbar“ setzen (inkl. Detailseite), sobald sie auf Pro in der Praxis genutzt wird
+- [ ] Prüfen, ob Personal-Modul und Fax-Versand (Dokumente) auf die Website gehören
 
 ## Niedrige Priorität / Ideen
 - [ ] SEO-Optimierung (Open Graph Images, strukturierte Daten)

@@ -53,8 +53,10 @@ src/
 │   │   ├── self-check-in/page.tsx
 │   │   ├── patienten-aufruf/page.tsx
 │   │   ├── sprechstunden-doku/page.tsx
+│   │   ├── schreibplatz/page.tsx
 │   │   ├── dokumenten-management/page.tsx
-│   │   └── gutachten-erstellung/page.tsx
+│   │   ├── dienstplanung/page.tsx
+│   │   └── kommunikation/page.tsx
 │   ├── roadmap/page.tsx                     # zeigt Module mit Status "in-development" / "planned"
 │   ├── kontakt/page.tsx
 │   ├── impressum/page.tsx
@@ -73,12 +75,14 @@ public/
     ├── automation.jpg
     ├── dienstplan.jpg
     ├── dokumente.jpg                        # Dokumenten-Management
-    ├── gutachten.jpg
+    ├── gutachten.jpg                        # Schreibplatz
+    ├── kommunikation.jpg                    # Kommunikation (lizenzfrei, auf 16:9 zugeschnitten)
     ├── wartezimmer.jpg
     ├── website_sprechstundedoku.jpg
     └── terminal_1-6.jpeg                    # Self-Check-In Terminal Produktfotos
 .github/
 └── workflows/
+    ├── ci.yml                               # Build-Check für jeden PR (Status-Check `build`)
     └── deploy.yml                           # GitHub Pages Auto-Deploy bei Push auf main
 ```
 
