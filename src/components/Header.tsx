@@ -28,17 +28,21 @@ export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = useState(pathname);
+
+  // Menüs bei Seitenwechsel schließen — während des Renderns statt in einem Effect
+  // (React-Muster „Adjusting state when a prop changes“, vermeidet doppeltes Rendern).
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setMobileOpen(false);
+    setDropdownOpen(false);
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-    setDropdownOpen(false);
-  }, [pathname]);
 
   const isActive = (href: string) =>
     pathname === href || (href !== "/" && pathname.startsWith(href));
