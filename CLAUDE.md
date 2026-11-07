@@ -43,7 +43,7 @@ EMMA durchläuft drei Stufen (seit 2026-10, Plan `PREPROD-STUFE` im Workway):
 - Prüfquelle für PROD ist das **ausgelieferte Handbuch in `emma-frontend` `main`** (`src/handbuch/handbuchContent.js`) plus die Navigation (`src/components/Sidebar.jsx`). Die Handbuch-Quellen in `emma-workway/docs/handbuch/` können dem PROD-Stand voraus sein.
 - Status-Wechsel auf `available` nie ohne Christians Freigabe.
 
-Zugriff: `gh` (Lesezugriff über den Org-Account) — z. B. Shallow-Clone des Produktiv-Branches ins Scratchpad oder `gh api`. Die lokalen Klone unter `../-=EMMA-StackIt_dev=-/` zeigen auf alte Remotes und sind **nicht** maßgeblich.
+Zugriff: `gh` (Lesezugriff über den Org-Account) — z. B. Shallow-Clone des Produktiv-Branches ins Scratchpad oder `gh api`. Die lokalen Klone unter `../emma-stackit-dev/` stehen meist auf `dev` oder Feature-Branches und sind daher **nicht** maßgeblich (Ausnahme: `workway/` auf `main`).
 
 Wann nachschauen:
 - **Feature-Beschreibungen prüfen:** Bevor neue Texte zu KI-Modulen geschrieben werden.
@@ -151,7 +151,7 @@ Definiert in `src/app/globals.css` im `@theme` Block. IMMER diese Farben verwend
 - **Animationen:** Nur `transform` und `opacity` animieren. Kein `transition-all`
 - **Interaktive Elemente:** Hover-, Focus- und Active-States für alle klickbaren Elemente
 - **Glasmorphismus:** Für Karten auf dunklem Hintergrund (`.glass`-Klasse in `globals.css`)
-- **Hero-Banner:** Hintergrundbild mit `.hero-backdrop` Glas-Panel für Textlesbarkeit. Bilder via statische Imports (wegen `basePath`)
+- **Hero-Banner:** Hintergrundbild mit `.hero-backdrop` Glas-Panel für Textlesbarkeit. Bilder via statische Imports (Konvention; einen `basePath` gibt es seit der Custom Domain nicht mehr)
 - **Responsive:** Mobile-first, Hamburger-Menü auf kleinen Screens
 
 ## Inbox / Outbox
@@ -175,7 +175,7 @@ npm run lint     # ESLint
 ## Workflow
 
 **Variante (b) — Feature-Branch + Pull Request** (seit 2026-09-27; mehrere Maintainer im Org-Repo).
-Der Merge in `main` ist die einzige Außenwirkung (triggert das Auto-Deploy) und liegt immer beim User.
+Der Merge in `main` ist die einzige Außenwirkung (triggert das Auto-Deploy). Claude mergt auf Anweisung des Users, sobald CI grün ist (seit 2026-11-07).
 
 | Schritt | Wer | Was |
 |---------|-----|-----|
@@ -187,7 +187,7 @@ Der Merge in `main` ist die einzige Außenwirkung (triggert das Auto-Deploy) und
 | 6. Commit | Claude (auf User-OK) | Commit mit aussagekräftiger Message |
 | 7. Push + PR | Claude (auf User-OK) | Feature-Branch pushen, PR gegen `main` öffnen (`gh pr create`) |
 | 8. CI | GitHub | Workflow `CI` baut den PR — muss grün sein |
-| 9. Merge | User | PR auf GitHub mergen → Auto-Deploy |
+| 9. Merge | Claude (auf User-Anweisung) | `gh pr merge <nr> --merge`, sobald CI grün → Auto-Deploy |
 
 **Branch-Schutz auf `main`:** PR-Pflicht (0 Approvals, Self-Merge erlaubt), Status-Check `build` muss grün sein, gilt auch für Admins, kein Force-Push, kein Löschen. Direktes Pushen auf `main` ist damit für alle gesperrt.
 
@@ -196,7 +196,7 @@ Der Merge in `main` ist die einzige Außenwirkung (triggert das Auto-Deploy) und
 - Neue Features/Änderungen als eigene Commits (nicht amenden)
 - Vor dem Commit immer `npm run build` erfolgreich durchlaufen lassen
 - Nie direkt auf `main` committen oder pushen — immer Feature-Branch + PR
-- Feature-Branch nur auf User-OK pushen; PRs nie selbst mergen
+- Feature-Branch nur auf User-OK pushen; PRs nur auf Anweisung des Users und nur bei grünem CI mergen
 
 ## Team (optional)
 Im Verzeichnis `Team/` liegen drei Agent-Profile (`web-leiter`, `web-architekt`, `web-rollen`). Sie sind für größere strukturelle oder architektonische Aufgaben gedacht. Für reine Inhalts-, Text- oder Bild-Edits ist direkte Arbeit ohne Delegation der Normalfall.
