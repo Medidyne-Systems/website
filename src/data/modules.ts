@@ -23,8 +23,23 @@ import dokumente from "../../public/images/dokumente.jpg";
 import abrechnung from "../../public/images/abrechnung.jpg";
 import dienstplan from "../../public/images/dienstplan.jpg";
 import kommunikation from "../../public/images/kommunikation.jpg";
+import posterSelfCheckIn from "../../public/images/videos/self-check-in.jpg";
+import posterPatientenAufruf from "../../public/images/videos/patienten-aufruf.jpg";
+import posterSprechstundenDoku from "../../public/images/videos/sprechstunden-doku.jpg";
+import posterSchreibplatz from "../../public/images/videos/schreibplatz.jpg";
+import posterDokumentenManagement from "../../public/images/videos/dokumenten-management.jpg";
 
 export type ModuleStatus = "available" | "in-development" | "planned";
+
+/** Marketing-Clip eines Moduls (Quelle: EMMA-Marketing, `outbox/Marketing/<projekt>/`). */
+export type ModuleVideo = {
+  /** Datei unter `public/videos/`, benannt nach dem Modul-Slug. */
+  src: string;
+  /** Vorschaubild: Standbild aus dem Clip unter `public/images/videos/`. */
+  poster: StaticImageData;
+  /** Kurzbeschreibung des Clip-Inhalts für Screenreader. */
+  description: string;
+};
 
 export type Module = {
   slug: string;
@@ -34,6 +49,8 @@ export type Module = {
   status: ModuleStatus;
   icon: LucideIcon;
   image?: StaticImageData;
+  /** Optionales Video; ohne Eintrag zeigt die Detailseite keinen Video-Abschnitt. */
+  video?: ModuleVideo;
   linkText?: string;
   /** Kurz-Stichpunkt für die Startseiten-Sektion „KI-gestützte Automatisierung". */
   homepageBullet: string;
@@ -53,6 +70,12 @@ export const modules: Module[] = [
     status: "available",
     icon: Monitor,
     image: terminal4,
+    video: {
+      src: "/videos/self-check-in.mp4",
+      poster: posterSelfCheckIn,
+      description:
+        "Ein Patient meldet sich am EmMa-Terminal mit der Gesundheitskarte an und steht sofort im T2med-Wartezimmer. Das Team am Tresen hat Zeit für Patienten, die Hilfe brauchen.",
+    },
     linkText: "Weitere Details zum Terminal",
     homepageBullet: "Digitale Patientenanmeldung per Self-Check-In",
     useCaseText: "Digitaler Self-Check-In für Patienten",
@@ -66,6 +89,12 @@ export const modules: Module[] = [
     status: "available",
     icon: Users,
     image: wartezimmer,
+    video: {
+      src: "/videos/patienten-aufruf.mp4",
+      poster: posterPatientenAufruf,
+      description:
+        "Aufruf direkt aus T2med: Gong, Name und Raum erscheinen auf dem Wartezimmer-Bildschirm, dazu sagt EmMa den Aufruf an.",
+    },
     linkText: "Mehr zum Patienten-Aufruf",
     homepageBullet: "Aufrufsystem über Monitor und Sprachansage im Wartezimmer",
     useCaseText: "Vereinfachter Wartezimmeraufruf",
@@ -79,6 +108,12 @@ export const modules: Module[] = [
     status: "available",
     icon: Mic,
     image: sprechstundeDoku,
+    video: {
+      src: "/videos/sprechstunden-doku.mp4",
+      poster: posterSprechstundenDoku,
+      description:
+        "EmMa nimmt das Arzt-Patienten-Gespräch auf und sortiert es in Anamnese, Befund, Diagnose und Therapie ein. Der Arzt prüft und überträgt per Knopf in T2med. Beim Hausbesuch kommt das Diktat vom iPhone.",
+    },
     linkText: "Mehr zur Sprechstunden-Doku",
     homepageBullet: "KI gestützte Sprechstundendokumentation",
     useCaseText: "Unterstützung zur Sprechstundendokumentation",
@@ -93,6 +128,12 @@ export const modules: Module[] = [
     status: "available",
     icon: FileCheck,
     image: gutachten,
+    video: {
+      src: "/videos/schreibplatz.mp4",
+      poster: posterSchreibplatz,
+      description:
+        "Der Arzt diktiert den Auftrag für einen Arztbrief und legt den Vorbefund dazu. EmMa schreibt den Entwurf, der Arzt prüft ihn und überträgt das PDF in die T2med-Akte.",
+    },
     linkText: "Mehr zum Schreibplatz",
     homepageBullet: "Gutachten, Arztbriefe und Atteste mit Hilfe von KI",
     useCaseText: "Unterstützung bei Gutachten, Arztbriefen und Attesten",
@@ -106,6 +147,12 @@ export const modules: Module[] = [
     status: "available",
     icon: FolderOpen,
     image: dokumente,
+    video: {
+      src: "/videos/dokumenten-management.mp4",
+      poster: posterDokumentenManagement,
+      description:
+        "Eingehende Faxe bleiben digital: EmMa fasst zusammen, ordnet die Kategorie zu und legt Dokumente in die Mappe des Arztes. Der Arzt liest am Bildschirm und schickt direkt per E-Mail weiter.",
+    },
     linkText: "Mehr zum Dokumenten-Management",
     homepageBullet: "Digitale Postmappe mit KI-Suche und Dringlichkeits-Triage",
     useCaseText: "Eingehende Befunde digital sichten und zuordnen",

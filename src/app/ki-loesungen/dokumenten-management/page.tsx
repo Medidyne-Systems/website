@@ -13,6 +13,7 @@ import {
   Trash2,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
+import { ModuleVideoSection } from "@/components/ModuleVideo";
 
 export const metadata: Metadata = {
   title: "Dokumenten-Management",
@@ -91,6 +92,8 @@ export default function DokumentenManagementPage() {
 
         <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-snow to-transparent" />
       </section>
+
+      <ModuleVideoSection slug="dokumenten-management" />
 
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

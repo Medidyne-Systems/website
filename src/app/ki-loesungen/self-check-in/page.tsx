@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import heroBg from "../../../../public/images/hero_bg.png";
+import { ModuleVideoSection } from "@/components/ModuleVideo";
 import terminal1 from "../../../../public/images/terminal_1.jpeg";
 import terminal2 from "../../../../public/images/terminal_2.jpeg";
 import terminal3 from "../../../../public/images/terminal_3.jpeg";
@@ -143,6 +144,8 @@ export default function SelfCheckInPage() {
 
         <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-snow to-transparent" />
       </section>
+
+      <ModuleVideoSection slug="self-check-in" />
 
       {/* ─── Benefits ─── */}
       <section className="py-14 bg-white">

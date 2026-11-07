@@ -43,7 +43,7 @@ const platformPoints: {
     icon: Plug,
     title: "Anbindung an Ihr Praxissystem",
     description:
-      "Aufrufe und Patientennachrichten lösen Sie per Knopfdruck aus Ihrem Praxisverwaltungssystem aus. Die strukturierte Übergabe der Sprechstunden-Dokumentation in die Patientenakte wird derzeit in der Praxis erprobt.",
+      "Aufrufe und Patientennachrichten lösen Sie per Knopfdruck aus Ihrem Praxisverwaltungssystem aus. Mit T2med geht es auch umgekehrt: Sprechstunden-Dokumentation und Schriftstücke aus dem Schreibplatz übertragen Sie per Knopf direkt in die Patientenakte.",
   },
   {
     icon: UserCog,
