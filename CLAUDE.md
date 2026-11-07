@@ -78,7 +78,10 @@ src/
 │   │   ├── schreibplatz/page.tsx
 │   │   ├── dokumenten-management/page.tsx
 │   │   ├── dienstplanung/page.tsx
-│   │   └── kommunikation/page.tsx
+│   │   ├── patientenkalender/page.tsx
+│   │   ├── zeiterfassung/page.tsx
+│   │   ├── kommunikation/page.tsx
+│   │   └── online-anliegen/page.tsx
 │   ├── roadmap/page.tsx                     # zeigt Module mit Status "in-development" / "planned"
 │   ├── kontakt/page.tsx
 │   ├── impressum/page.tsx
