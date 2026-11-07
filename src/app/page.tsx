@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import heroBg from "../../public/images/hero_bg.png";
 import terminal4 from "../../public/images/terminal_4.jpeg";
+import posterProduktvideo from "../../public/images/videos/produktvideo.jpg";
 import { availableModules, inDevelopmentModules } from "@/data/modules";
 
 const pillars = [
@@ -114,6 +115,25 @@ export default function HomePage() {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
+      </section>
+
+      {/* ─── Produktvideo ─── */}
+      <section id="video" className="pt-10 pb-4 bg-white">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight text-center mb-8">
+            EmMa in zwei Minuten
+          </h2>
+          <video
+            controls
+            preload="none"
+            playsInline
+            poster={posterProduktvideo.src}
+            aria-label="Ein Praxistag mit EmMa: Check-in am Terminal, Patienten-Aufruf, Sprechstunden-Doku, Schreibplatz, Dokumente, Kommunikation, Patientenkalender, Dienstplan und Zeiterfassung. Am Ende die geschätzte Zeitersparnis für eine Musterpraxis mit einem Arzt und zwei MFA."
+            className="w-full aspect-video rounded-2xl border border-violet/10 bg-midnight shadow-xl shadow-violet/5"
+          >
+            <source src="/videos/produktvideo.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
 
       {/* ─── Drei Säulen ─── */}

@@ -35,6 +35,7 @@ import posterPatientenkalender from "../../public/images/videos/patientenkalende
 import posterKommunikation from "../../public/images/videos/kommunikation.jpg";
 import posterZeiterfassung from "../../public/images/videos/zeiterfassung.jpg";
 import posterOnlineAnliegen from "../../public/images/videos/online-anliegen.jpg";
+import posterTerminalBestellung from "../../public/images/videos/terminal-bestellung.jpg";
 
 export type ModuleStatus = "available" | "in-development" | "planned";
 
@@ -287,6 +288,12 @@ export const modules: Module[] = [
       "Patienten bestellen Folgerezepte, Überweisungen und Sonstiges selbst am Check-In-Terminal: Karte stecken, Art wählen, sagen, was gebraucht wird. EmMa übernimmt das Gesprochene als Text in den Eingang, das Praxisteam bearbeitet die Bestellung dort — ohne Anstellen an der Anmeldung.",
     status: "available",
     icon: ClipboardList,
+    video: {
+      src: "/videos/terminal-bestellung.mp4",
+      poster: posterTerminalBestellung,
+      description:
+        "Ein Patient steckt am EmMa-Terminal seine Gesundheitskarte, wählt „Bestellung“ und sagt, welches Medikament er braucht. Die Bestellung landet als Text im Eingang der Praxis, das Team bearbeitet sie dort und markiert sie als erledigt.",
+    },
     linkText: "Mehr zur Bestellung am Terminal",
     homepageBullet: "Bestellungen per Sprache am Check-In-Terminal",
     useCaseText: "Folgerezepte und Überweisungen ohne Anmeldung bestellen",
