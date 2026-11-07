@@ -11,25 +11,26 @@ import {
   Files,
   Lock,
   Trash2,
+  Send,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
   title: "Dokumenten-Management",
   description:
-    "Digitale Postmappe für eingehende Befunde und Berichte — automatisch kategorisiert, nach Dringlichkeit sortiert, per KI durchsuchbar.",
+    "Digitale Postmappe für eingehende Befunde und Berichte — automatisch kategorisiert, nach Dringlichkeit sortiert, mit eigener Mappe je Arzt.",
 };
 
 const features = [
   {
     icon: Inbox,
     title: "Digitale Postmappe",
-    description: "Eingehende Befunde und Berichte laufen an einer Stelle zusammen. Jeder Arzt bekommt seine eigene Mappe — nach Wichtigkeit und Gelesen-Status sortiert, ohne dass etwas ausgeblendet wird.",
+    description: "Eingehende Befunde und Berichte laufen an einer Stelle zusammen. Jeder Arzt bekommt seine eigene Mappe — nach Wichtigkeit und Gelesen-Status sortiert. Heruntergeladenes rückt als erledigt in eine eigene Ansicht.",
   },
   {
     icon: AlertCircle,
     title: "Dringlichkeit auf einen Blick",
-    description: "Jedes Dokument bekommt automatisch eine Einstufung, die Ihr Team mit einem Klick korrigieren kann. Ungelesene und eilige Vorgänge zeigt ein Zähler direkt in der Navigation.",
+    description: "Eil-Vermerke im Schreiben wie „EILT“ oder „Frist“ und als kritisch markierte Kategorien stufen ein Dokument automatisch als dringend ein — eine medizinische Bewertung nimmt EmMa nicht vor. Ihr Team korrigiert die Einstufung mit einem Klick. Ungelesene und eilige Vorgänge zeigt ein Zähler direkt in der Navigation.",
   },
   {
     icon: Printer,
@@ -43,8 +44,8 @@ const features = [
   },
   {
     icon: Search,
-    title: "Suche, die versteht",
-    description: "Neben Freitext- und Filtersuche findet die KI-Suche inhaltlich passende Dokumente — auch wenn Sie nicht dieselben Worte verwenden wie das Schreiben.",
+    title: "Schnell gefunden",
+    description: "Textsuche über Dateiname und Zusammenfassung, dazu Filter nach Mappe und Kategorie.",
   },
   {
     icon: Files,
@@ -57,9 +58,14 @@ const features = [
     description: "Wer für eine Kategorie nicht freigegeben ist, sieht deren Dokumente weder in der Liste noch in der Vorschau oder im Download.",
   },
   {
+    icon: Send,
+    title: "Direkt weiterschicken",
+    description: "Dokumente gehen direkt aus EmMa hinaus — per E-Mail an Mitbehandler oder Patienten, per Fax* an Mitbehandler aus dem Adressbuch. Ein Deckblatt auf Ihrem Praxis-Briefbogen wird automatisch vorangestellt.",
+  },
+  {
     icon: Trash2,
     title: "Keine Datenhalde",
-    description: "Dokumente werden nach 30 Tagen automatisch entfernt. EmMa ist der Weg in die Patientenakte, kein zweites Archiv daneben.",
+    description: "Dokumente werden nach 7 Tagen automatisch gelöscht. EmMa ist Durchlauf, kein Archiv — die endgültige Ablage gehört in Ihr Praxissystem.",
   },
   {
     icon: ShieldCheck,
@@ -113,6 +119,9 @@ export default function DokumentenManagementPage() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-center text-xs text-midnight/50">
+            * Für den Fax-Versand wird ein angebundener Fax-Dienstleister benötigt.
+          </p>
         </div>
       </section>
 
