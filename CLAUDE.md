@@ -64,11 +64,14 @@ src/
 ├── components/
 │   ├── Header.tsx                           # Sticky Nav mit Mobile-Menü
 │   ├── Footer.tsx
+│   ├── ModuleVideo.tsx                      # Video-Abschnitt der Detailseiten (rendert nichts ohne `video` in modules.ts)
 │   └── StatusBadge.tsx                      # Verfügbar / In Entwicklung / Geplant Pills
 ├── data/
-│   └── modules.ts                           # ZENTRALE Modul-Datenquelle (Status, displayName, internalName)
+│   └── modules.ts                           # ZENTRALE Modul-Datenquelle (Status, displayName, internalName, video)
 public/
+├── videos/<slug>.mp4                        # Modul-Clips aus EMMA-Marketing (`emma-stackit-dev/outbox/Marketing/`); Austausch = Datei überschreiben
 └── images/
+    ├── videos/<slug>.jpg                    # Vorschaubilder der Clips (Standbild aus dem Clip)
     ├── logo_medidyne.png                    # Firmenlogo
     ├── hero_bg.png                          # Hero-Hintergrundbild
     ├── abrechnung.jpg

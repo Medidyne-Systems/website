@@ -13,8 +13,10 @@ import {
   Stamp,
   BookUser,
   PenLine,
+  Share2,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
+import { ModuleVideoSection } from "@/components/ModuleVideo";
 
 export const metadata: Metadata = {
   title: "Schreibplatz",
@@ -74,6 +76,11 @@ const features = [
     description: "Jeder Entwurf kann vor der Freigabe überprüft und angepasst werden — die KI liefert die Basis, Sie behalten die Kontrolle.",
   },
   {
+    icon: Share2,
+    title: "Direkt in die T2med-Akte",
+    description: "Ist der Schreibplatz aus T2med geöffnet, überträgt ein Klick das fertige Schriftstück als PDF in die Patientenakte — ohne Umweg über Ausdruck oder Download.",
+  },
+  {
     icon: History,
     title: "Archiv",
     description: "Alle erstellten Schriftstücke in einer chronologischen Liste, nach Dokumenttyp filterbar. Der freigegebene Text wird beim Speichern festgeschrieben.",
@@ -103,6 +110,8 @@ export default function SchreibplatzPage() {
 
         <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-snow to-transparent" />
       </section>
+
+      <ModuleVideoSection slug="schreibplatz" />
 
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -15,6 +15,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
+import { ModuleVideoSection } from "@/components/ModuleVideo";
 
 export const metadata: Metadata = {
   title: "Sprechstunden-Dokumentation",
@@ -75,8 +76,8 @@ const features = [
   },
   {
     icon: Share2,
-    title: "Übergabe ins Praxissystem",
-    description: "Die fertige Dokumentation wandert strukturiert in die Patientenakte Ihres Praxisverwaltungssystems — ohne Kopieren und Einfügen. Diese Anbindung wird derzeit in der Praxis erprobt.",
+    title: "Übergabe an T2med",
+    description: "Per Knopf landen Anamnese, Befund, Therapie und die vom Arzt bestätigten ICD-Diagnosen strukturiert in der T2med-Patientenakte — ohne Kopieren und Einfügen.",
   },
 ];
 
@@ -103,6 +104,8 @@ export default function SprechstundenDokuPage() {
 
         <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-snow to-transparent" />
       </section>
+
+      <ModuleVideoSection slug="sprechstunden-doku" />
 
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
