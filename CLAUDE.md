@@ -21,6 +21,28 @@ Die Website bewirbt EMMA — die Multi-Tenant-KI-Plattform für Arztpraxen. Wenn
 | `emma-workway` | `main` | Pläne (inkl. `_abgeschlossen`), Architektur-/Prozess-Doku |
 | `emma-local`, `emma-wartezimmer`, `emma-admin` | `main` | Praxis-lokaler Client, Wartezimmer-Screen, Admin/Support |
 
+### Release-Stufen und Modul-Status (Entscheidung 2026-11-07)
+
+EMMA durchläuft drei Stufen (seit 2026-10, Plan `PREPROD-STUFE` im Workway):
+
+| Stufe | Branch | Wer arbeitet damit |
+|-------|--------|--------------------|
+| Entwicklung | `dev` | nur GitHub-Branch, kein eigener Server |
+| Praxistest | `preprod` | eigene Praxis (live, mit Terminal, Wartezimmer, emma-local) |
+| PROD | `main` / `master` | externe Praxen — erst nach 1–3 Wochen Stabilität auf `preprod` |
+
+**Die Grenze für die Website ist PROD.** Daraus folgt der `status` in `src/data/modules.ts`:
+
+| Status | Kriterium |
+|--------|-----------|
+| `available` | Modul ist auf PROD in der Navigation, hat ein Handbuch-Kapitel **und** Christian hat es als verkaufsfähig freigegeben |
+| `in-development` | läuft auf `preprod` oder wird aktiv mit Plan entwickelt |
+| `planned` | Plan oder Idee, noch kein Code |
+
+- Auch **innerhalb** eines verfügbaren Moduls nur den PROD-Funktionsumfang beschreiben. Funktionen, die erst auf `preprod` laufen, kommen erst mit dem Sprung auf PROD auf die Website. Temporäre Testseiten (z. B. `/termin-testen`) zählen nicht.
+- Prüfquelle für PROD ist das **ausgelieferte Handbuch in `emma-frontend` `main`** (`src/handbuch/handbuchContent.js`) plus die Navigation (`src/components/Sidebar.jsx`). Die Handbuch-Quellen in `emma-workway/docs/handbuch/` können dem PROD-Stand voraus sein.
+- Status-Wechsel auf `available` nie ohne Christians Freigabe.
+
 Zugriff: `gh` (Lesezugriff über den Org-Account) — z. B. Shallow-Clone des Produktiv-Branches ins Scratchpad oder `gh api`. Die lokalen Klone unter `../-=EMMA-StackIt_dev=-/` zeigen auf alte Remotes und sind **nicht** maßgeblich.
 
 Wann nachschauen:
