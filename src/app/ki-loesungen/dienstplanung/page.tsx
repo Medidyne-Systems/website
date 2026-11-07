@@ -10,6 +10,10 @@ import {
   Palmtree,
   BarChart3,
   Smartphone,
+  Heart,
+  ArrowLeftRight,
+  UsersRound,
+  CalendarRange,
 } from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 import { ModuleVideoSection } from "@/components/ModuleVideo";
@@ -59,7 +63,27 @@ const features = [
   {
     icon: Smartphone,
     title: "Meine Dienste unterwegs",
-    description: "Jeder im Team sieht seine eigenen Dienste — auch auf dem Handy, wo sich EmMa wie eine App installieren lässt.",
+    description: "Jeder im Team sieht seine eigenen Dienste und sein Urlaubskonto und stellt Urlaubsanträge selbst — auch auf dem Handy, wo sich EmMa wie eine App installieren lässt.",
+  },
+  {
+    icon: Heart,
+    title: "Dienstwünsche",
+    description: "Mitarbeiterinnen tragen ein, wann sie frei haben oder arbeiten möchten. Die Planung nimmt Wünsche an oder lehnt sie ab — je Berufsgruppe einschaltbar.",
+  },
+  {
+    icon: ArrowLeftRight,
+    title: "Dienste tauschen",
+    description: "Einen Dienst auf eine andere Zelle ziehen tauscht ihn — auch über Tage und Schichten hinweg. Passt jemand nicht auf den neuen Platz, sagt EmMa es vorher.",
+  },
+  {
+    icon: UsersRound,
+    title: "Planer je Berufsgruppe",
+    description: "Ärzte und MFA planen oft verschiedene Personen. Je Berufsgruppe lässt sich festlegen, wer sie bearbeiten darf — ansehen können alle.",
+  },
+  {
+    icon: CalendarRange,
+    title: "Verbunden mit dem Patientenkalender",
+    description: "Freie Patiententermine entstehen aus den Diensten. Ändert sich der Plan, sieht die Planung vorher, wie viele gebuchte Termine betroffen sind.",
   },
 ];
 

@@ -12,6 +12,8 @@ import {
   Clock,
   MessageCircle,
   ClipboardList,
+  CalendarRange,
+  Globe,
   type LucideIcon,
 } from "lucide-react";
 
@@ -174,13 +176,25 @@ export const modules: Module[] = [
     displayName: "Dienstplanung",
     internalName: "Dienstplanung",
     description:
-      "Schicht- und Urlaubsplanung für das gesamte Team: Der Wochenplan entsteht automatisch nach Bedarf und fairer Verteilung, die Mindestbesetzung bleibt im Blick, und bei Ausfällen schlägt EmMa passenden Ersatz vor.",
+      "Schicht- und Urlaubsplanung für das gesamte Team: Der Wochenplan entsteht automatisch nach Bedarf und fairer Verteilung, die Mindestbesetzung bleibt im Blick, und bei Ausfällen schlägt EmMa passenden Ersatz vor. Das Team sieht seine Dienste, stellt Urlaubsanträge und äußert Dienstwünsche selbst.",
     status: "available",
     icon: CalendarDays,
     image: dienstplan,
     linkText: "Mehr zur Dienstplanung",
     homepageBullet: "Dienstplanerstellung und Management mit geringstem Aufwand",
     useCaseText: "Hilfe bei der Dienstplanerstellung und Pflege",
+  },
+  {
+    slug: "patientenkalender",
+    displayName: "Patientenkalender",
+    internalName: "Patientenkalender",
+    description:
+      "Patiententermine in der Wochenansicht — die freien Termine entstehen direkt aus dem Dienstplan. Ändert sich ein Dienst, zieht der Kalender von selbst nach, und Termine, hinter denen kein passender Dienst mehr steht, werden markiert.",
+    status: "available",
+    icon: CalendarRange,
+    linkText: "Mehr zum Patientenkalender",
+    homepageBullet: "Patiententermine, die dem Dienstplan folgen",
+    useCaseText: "Freie Termine automatisch aus dem Dienstplan",
   },
   {
     slug: "kommunikation",
@@ -201,21 +215,34 @@ export const modules: Module[] = [
     internalName: "Zeiterfassung",
     description:
       "Rechtskonforme Arbeitszeiterfassung für das Praxisteam: Kommen und Gehen per Klick oder Chip am Check-In-Terminal, gesetzliche Mindestpausen automatisch berücksichtigt, Tages- und Wochensaldo, Freigabe von Überstunden durch die Praxisleitung und Stundennachweis als PDF.",
-    status: "in-development",
+    status: "available",
     icon: Clock,
+    linkText: "Mehr zur Zeiterfassung",
     homepageBullet: "Rechtskonforme Arbeitszeiterfassung für das Team",
     useCaseText: "Arbeitszeiten erfassen und Salden im Blick behalten",
   },
   {
-    slug: "online-anfragen",
-    displayName: "Online-Anfragen",
-    internalName: "Chat",
+    slug: "online-anliegen",
+    displayName: "Online-Anliegen",
+    internalName: "Online-Anliegen",
     description:
-      "Chat-Fenster auf der Praxis-Homepage mit Themen-Vorauswahl, Textbausteinen und Öffnungszeiten. Anfragen laufen beim Praxisteam in derselben Oberfläche zusammen wie die übrige Patientenkommunikation.",
-    status: "planned",
+      "Ein Fenster auf Ihrer Praxis-Homepage für organisatorische Anliegen: Folgerezept, Überweisung, Rückruf oder Terminanfrage. Aus jedem Anliegen wird ein Nachrichtenverlauf, den Ihr Team im Eingang von EmMa beantwortet — mit eigenen Annahmezeiten und Antwort-Bausteinen.",
+    status: "available",
     icon: MessageCircle,
-    homepageBullet: "Patientenanfragen über die Praxis-Homepage",
-    useCaseText: "Online-Anfragen von Patienten gebündelt bearbeiten",
+    linkText: "Mehr zu Online-Anliegen",
+    homepageBullet: "Patientenanliegen über die Praxis-Homepage",
+    useCaseText: "Online-Anliegen von Patienten gebündelt bearbeiten",
+  },
+  {
+    slug: "praxis-homepage",
+    displayName: "Praxis-Homepage",
+    internalName: "Homepage",
+    description:
+      "Die Internetseite der Praxis direkt in EmMa pflegen: Seiten, Standorte, Team, Beiträge, Stellenangebote und Bilder liegen an einer Stelle. Ein Assistent richtet die Homepage aus den Praxisdaten ein, die schon in EmMa stehen.",
+    status: "in-development",
+    icon: Globe,
+    homepageBullet: "Praxis-Homepage direkt in EmMa pflegen",
+    useCaseText: "Die Praxis-Homepage selbst aktuell halten",
   },
   {
     slug: "terminal-bestellung",
