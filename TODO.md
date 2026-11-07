@@ -9,7 +9,7 @@
 - [ ] Feedback der Kollegen einarbeiten
 - [ ] Kollegen (MaximilianPfister, schindlerb) über neuen PR-Workflow + Branch-Schutz informieren
 - [x] Zeiterfassung auf „verfügbar“ setzen (inkl. Detailseite) — erledigt 2026-11-07 (PR #14)
-- [ ] Bestellung am Terminal: laut PROD-Handbuch (Terminal-Kapitel, Wahl „Sprechstunde / Bestellung“) wohl schon auf PROD, Website zeigt „Geplant“ — PROD-Stand prüfen, Christians Freigabe einholen
+- [x] Bestellung am Terminal auf „verfügbar“ setzen (inkl. Detailseite) — von Christian als produktionsreif freigegeben 2026-11-07
 - [ ] Abrechnungs-Optimierung: auf PROD in Navigation und Handbuch, Website „In Entwicklung“ — wartet auf Christians Freigabe als verkaufsfähig
 - [ ] Patientenkalender-Seite nachziehen, sobald neue Oberfläche (KAL-UI) und Online-Buchung auf PROD sind
 - [ ] Praxis-Homepage auf „verfügbar“ setzen (inkl. Detailseite), sobald das Modul auf PROD ist
