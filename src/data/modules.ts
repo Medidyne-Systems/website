@@ -30,6 +30,11 @@ import posterPatientenAufruf from "../../public/images/videos/patienten-aufruf.j
 import posterSprechstundenDoku from "../../public/images/videos/sprechstunden-doku.jpg";
 import posterSchreibplatz from "../../public/images/videos/schreibplatz.jpg";
 import posterDokumentenManagement from "../../public/images/videos/dokumenten-management.jpg";
+import posterDienstplanung from "../../public/images/videos/dienstplanung.jpg";
+import posterPatientenkalender from "../../public/images/videos/patientenkalender.jpg";
+import posterKommunikation from "../../public/images/videos/kommunikation.jpg";
+import posterZeiterfassung from "../../public/images/videos/zeiterfassung.jpg";
+import posterOnlineAnliegen from "../../public/images/videos/online-anliegen.jpg";
 
 export type ModuleStatus = "available" | "in-development" | "planned";
 
@@ -114,7 +119,7 @@ export const modules: Module[] = [
       src: "/videos/sprechstunden-doku.mp4",
       poster: posterSprechstundenDoku,
       description:
-        "EmMa nimmt das Arzt-Patienten-Gespräch auf und sortiert es in Anamnese, Befund, Diagnose und Therapie ein. Der Arzt prüft und überträgt per Knopf in T2med. Beim Hausbesuch kommt das Diktat vom iPhone.",
+        "EmMa nimmt das Arzt-Patienten-Gespräch auf und sortiert es in Anamnese, Befund, Diagnose und Therapie ein. Der Arzt prüft und überträgt per Knopf in T2med. Beim Hausbesuch kommt das Diktat vom Smartphone.",
     },
     linkText: "Mehr zur Sprechstunden-Doku",
     homepageBullet: "KI gestützte Sprechstundendokumentation",
@@ -180,6 +185,12 @@ export const modules: Module[] = [
     status: "available",
     icon: CalendarDays,
     image: dienstplan,
+    video: {
+      src: "/videos/dienstplanung.mp4",
+      poster: posterDienstplanung,
+      description:
+        "Eine MFA fällt krank aus. Die Planerin trägt es einmal im EmMa-Dienstplan ein, EmMa zeigt, welche Dienste frei werden und wer einspringen kann. Die Kollegin sieht den neuen Dienst in ‚Meine Dienste‘ am Handy.",
+    },
     linkText: "Mehr zur Dienstplanung",
     homepageBullet: "Dienstplanerstellung und Management mit geringstem Aufwand",
     useCaseText: "Hilfe bei der Dienstplanerstellung und Pflege",
@@ -192,6 +203,12 @@ export const modules: Module[] = [
       "Patiententermine im Tagesblick mit einer Spalte je Person im Dienst — die freien Termine entstehen direkt aus dem Dienstplan. Ändert sich ein Dienst, zieht der Kalender von selbst nach, und Termine, hinter denen kein passender Dienst mehr steht, landen in der Liste „Ausfälle“.",
     status: "available",
     icon: CalendarRange,
+    video: {
+      src: "/videos/patientenkalender.mp4",
+      poster: posterPatientenkalender,
+      description:
+        "Die Tagesansicht zeigt eine Spalte je Person im Dienst, freie Zeiten kommen aus dem Dienstplan. Die MFA übernimmt den Patienten per Knopf aus T2med und bucht den nächsten freien Termin in zwei Schritten. Am Terminal bucht eine Patientin selbst mit der Gesundheitskarte, und fällt ein Dienst aus, zeigt EmMa die Liste der betroffenen Termine zum Anrufen.",
+    },
     linkText: "Mehr zum Patientenkalender",
     homepageBullet: "Patiententermine, die dem Dienstplan folgen",
     useCaseText: "Freie Termine automatisch aus dem Dienstplan",
@@ -205,6 +222,12 @@ export const modules: Module[] = [
     status: "available",
     icon: MessageSquare,
     image: kommunikation,
+    video: {
+      src: "/videos/kommunikation.mp4",
+      poster: posterKommunikation,
+      description:
+        "Ein Klick in T2med legt den Auftrag in EmMa an. Die MFA wählt einen Textbaustein, prüft die Vorschau und sendet. Der Patient bekommt die E-Mail mit dem Schreiben auf dem Briefkopf der Praxis, der Beleg landet in der T2med-Akte.",
+    },
     linkText: "Mehr zur Kommunikation",
     homepageBullet: "Patientennachrichten direkt aus der Praxis versenden",
     useCaseText: "Patienten benachrichtigen ohne Umweg über Fremdsysteme",
@@ -217,6 +240,12 @@ export const modules: Module[] = [
       "Arbeitszeiterfassung für das Praxisteam: Kommen und Gehen per Klick oder Chip am Check-In-Terminal, gesetzliche Mindestpausen automatisch berücksichtigt, Tages- und Wochensaldo, Freigabe von Überstunden durch die Praxisleitung und Stundennachweis als PDF.",
     status: "available",
     icon: Clock,
+    video: {
+      src: "/videos/zeiterfassung.mp4",
+      poster: posterZeiterfassung,
+      description:
+        "Eine MFA stempelt morgens, mittags und abends mit dem Chip am EmMa-Terminal. EmMa zeigt Ist, Soll und Saldo der Woche und gibt am Monatsende den Stundennachweis als PDF oder CSV aus.",
+    },
     linkText: "Mehr zur Zeiterfassung",
     homepageBullet: "Arbeitszeiterfassung für das Team per Klick oder Chip",
     useCaseText: "Arbeitszeiten erfassen und Salden im Blick behalten",
@@ -229,6 +258,12 @@ export const modules: Module[] = [
       "Ein Fenster auf Ihrer Praxis-Homepage für organisatorische Anliegen: Folgerezept, Überweisung, Rückruf oder Terminanfrage. Aus jedem Anliegen wird ein Nachrichtenverlauf, den Ihr Team im Eingang von EmMa beantwortet — mit eigenen Annahmezeiten und Antwort-Bausteinen.",
     status: "available",
     icon: MessageCircle,
+    video: {
+      src: "/videos/online-anliegen.mp4",
+      poster: posterOnlineAnliegen,
+      description:
+        "Die Patientin schickt ihren Rezept-Wunsch über das Fenster auf der Praxis-Homepage, mit festem Hinweis auf 112 und 116117. Die MFA holt das Anliegen im Eingang, kopiert den Namen und klickt auf ‚Bereit‘. Die Antwort steht im Verlauf der Patientin, die E-Mail dazu enthält nur einen Link.",
+    },
     linkText: "Mehr zu Online-Anliegen",
     homepageBullet: "Patientenanliegen über die Praxis-Homepage",
     useCaseText: "Online-Anliegen von Patienten gebündelt bearbeiten",
