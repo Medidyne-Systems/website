@@ -67,7 +67,7 @@ src/
 ├── app/
 │   ├── globals.css                          # Tailwind @theme, Animationen, Utilities
 │   ├── layout.tsx                           # Root Layout (Header + Footer)
-│   ├── page.tsx                             # Startseite
+│   ├── page.tsx                             # Startseite (Produktvideo-Abschnitt „EmMa in zwei Minuten“ unter dem Hero)
 │   ├── ueber-uns/page.tsx
 │   ├── philosophie/page.tsx
 │   ├── ki-loesungen/                        # zeigt nur verfügbare Module (status: "available")
@@ -96,6 +96,7 @@ src/
 │   └── modules.ts                           # ZENTRALE Modul-Datenquelle (Status, displayName, internalName, video)
 public/
 ├── videos/<slug>.mp4                        # Modul-Clips aus EMMA-Marketing (`emma-stackit-dev/outbox/Marketing/`); Austausch = Datei überschreiben
+├── videos/produktvideo.mp4                  # 2-Min.-Produktvideo der Startseite (Quelle `outbox/Marketing/produktvideo/`)
 └── images/
     ├── videos/<slug>.jpg                    # Vorschaubilder der Clips (Standbild aus dem Clip)
     ├── logo_medidyne.png                    # Firmenlogo
