@@ -102,12 +102,12 @@ export const modules: Module[] = [
     displayName: "Dokumenten-Management",
     internalName: "Dokumente",
     description:
-      "Digitale Postmappe für eingehende Befunde und Berichte: automatische Kategorisierung, Dringlichkeits-Einstufung durch das Team und eine nach Wichtigkeit sortierte Mappe je Arzt — mit KI-Suche, die inhaltlich Passendes findet.",
+      "Digitale Postmappe für eingehende Befunde und Berichte: automatische Kategorisierung, eine Dringlichkeits-Einstufung nach Eil-Vermerken, die Ihr Team mit einem Klick korrigiert, und eine nach Wichtigkeit sortierte Mappe je Arzt.",
     status: "available",
     icon: FolderOpen,
     image: dokumente,
     linkText: "Mehr zum Dokumenten-Management",
-    homepageBullet: "Digitale Postmappe mit KI-Suche und Dringlichkeits-Triage",
+    homepageBullet: "Digitale Postmappe, nach Dringlichkeit sortiert und je Arzt zugeordnet",
     useCaseText: "Eingehende Befunde digital sichten und zuordnen",
   },
   {
