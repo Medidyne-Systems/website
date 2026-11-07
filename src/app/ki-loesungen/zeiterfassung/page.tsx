@@ -15,7 +15,7 @@ import { ModuleVideoSection } from "@/components/ModuleVideo";
 export const metadata: Metadata = {
   title: "Zeiterfassung",
   description:
-    "Rechtskonforme Arbeitszeiterfassung für das Praxisteam — Stempeln per Klick oder Chip, Mindestpausen automatisch, Saldo gegen das Soll und Stundennachweis als PDF.",
+    "Arbeitszeiterfassung für das Praxisteam — Stempeln per Klick oder Chip, Mindestpausen nach dem Arbeitszeitgesetz automatisch, Saldo gegen das Soll und Stundennachweis als PDF.",
 };
 
 const features = [
@@ -32,7 +32,7 @@ const features = [
   {
     icon: Coffee,
     title: "Mindestpausen automatisch",
-    description: "Reichen die gestempelten Pausen nach dem Arbeitszeitgesetz nicht aus, ergänzt EmMa die Differenz und vermerkt das sichtbar — für Jugendliche mit den eigenen Grenzen.",
+    description: "Reichen die gestempelten Pausen nach dem Arbeitszeitgesetz nicht aus, zieht EmMa die fehlende Mindestpause ab und weist darauf hin — für Jugendliche mit den eigenen Grenzen, sobald das Geburtsdatum hinterlegt ist.",
   },
   {
     icon: Scale,
@@ -42,7 +42,7 @@ const features = [
   {
     icon: UserCheck,
     title: "Team-Übersicht für die Leitung",
-    description: "Alle Zeiten auf einen Blick, Überstunden annehmen oder ablehnen, fehlerhafte Einträge mit sichtbarem Vermerk korrigieren, Urlaubsanträge entscheiden.",
+    description: "Alle Zeiten auf einen Blick, Überstunden annehmen oder ablehnen, vergessenes Ausstempeln nachtragen (im Stundennachweis vermerkt), Urlaubsanträge entscheiden.",
   },
   {
     icon: FileDown,
@@ -67,7 +67,7 @@ export default function ZeiterfassungPage() {
               Zeiterfassung
             </h1>
             <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
-              Arbeitszeiten rechtskonform erfassen — mit einem Klick oder Chip.
+              Arbeitszeiten erfassen — mit einem Klick oder Chip.
             </p>
           </div>
         </div>

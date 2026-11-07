@@ -189,7 +189,7 @@ export const modules: Module[] = [
     displayName: "Patientenkalender",
     internalName: "Patientenkalender",
     description:
-      "Patiententermine in der Wochenansicht — die freien Termine entstehen direkt aus dem Dienstplan. Ändert sich ein Dienst, zieht der Kalender von selbst nach, und Termine, hinter denen kein passender Dienst mehr steht, werden markiert.",
+      "Patiententermine im Tagesblick mit einer Spalte je Person im Dienst — die freien Termine entstehen direkt aus dem Dienstplan. Ändert sich ein Dienst, zieht der Kalender von selbst nach, und Termine, hinter denen kein passender Dienst mehr steht, landen in der Liste „Ausfälle“.",
     status: "available",
     icon: CalendarRange,
     linkText: "Mehr zum Patientenkalender",
@@ -201,7 +201,7 @@ export const modules: Module[] = [
     displayName: "Kommunikation",
     internalName: "Kommunikation",
     description:
-      "Nachrichten an Patienten direkt aus der Praxis heraus — Befund liegt vor, Bitte um Rückruf, Terminhinweis. Ausgelöst per Knopfdruck aus Ihrem Praxissystem oder manuell, versendet als E-Mail mit Anschreiben im Praxis-Briefkopf. Der Versand wird an Ihr Praxissystem zurückgemeldet.",
+      "Nachrichten an Patienten direkt aus der Praxis heraus — Bitte im Labor vorstellen, Bitte um Rückruf, Terminhinweis. Ausgelöst per Knopfdruck aus T2med oder manuell, versendet als E-Mail mit Anschreiben im Praxis-Briefkopf. Bei Aufträgen aus T2med wird der Versand dorthin zurückgemeldet.",
     status: "available",
     icon: MessageSquare,
     image: kommunikation,
@@ -214,11 +214,11 @@ export const modules: Module[] = [
     displayName: "Zeiterfassung",
     internalName: "Zeiterfassung",
     description:
-      "Rechtskonforme Arbeitszeiterfassung für das Praxisteam: Kommen und Gehen per Klick oder Chip am Check-In-Terminal, gesetzliche Mindestpausen automatisch berücksichtigt, Tages- und Wochensaldo, Freigabe von Überstunden durch die Praxisleitung und Stundennachweis als PDF.",
+      "Arbeitszeiterfassung für das Praxisteam: Kommen und Gehen per Klick oder Chip am Check-In-Terminal, gesetzliche Mindestpausen automatisch berücksichtigt, Tages- und Wochensaldo, Freigabe von Überstunden durch die Praxisleitung und Stundennachweis als PDF.",
     status: "available",
     icon: Clock,
     linkText: "Mehr zur Zeiterfassung",
-    homepageBullet: "Rechtskonforme Arbeitszeiterfassung für das Team",
+    homepageBullet: "Arbeitszeiterfassung für das Team per Klick oder Chip",
     useCaseText: "Arbeitszeiten erfassen und Salden im Blick behalten",
   },
   {
