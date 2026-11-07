@@ -249,9 +249,10 @@ export const modules: Module[] = [
     displayName: "Bestellung am Terminal",
     internalName: "Bestellungen",
     description:
-      "Patienten geben Folgerezepte, Überweisungen und Formulare selbst am Check-In-Terminal per Sprache auf. Die Aufnahme wird automatisch verschriftlicht und erscheint als Arbeitsliste beim Praxisteam — der zweithäufigste Grund für den Gang zur Anmeldung entfällt.",
-    status: "planned",
+      "Patienten bestellen Folgerezepte, Überweisungen und Sonstiges selbst am Check-In-Terminal: Karte stecken, Art wählen, sagen, was gebraucht wird. EmMa übernimmt das Gesprochene als Text in den Eingang, das Praxisteam bearbeitet die Bestellung dort — ohne Anstellen an der Anmeldung.",
+    status: "available",
     icon: ClipboardList,
+    linkText: "Mehr zur Bestellung am Terminal",
     homepageBullet: "Bestellungen per Sprache am Check-In-Terminal",
     useCaseText: "Folgerezepte und Überweisungen ohne Anmeldung bestellen",
   },

@@ -81,7 +81,8 @@ src/
 │   │   ├── patientenkalender/page.tsx
 │   │   ├── zeiterfassung/page.tsx
 │   │   ├── kommunikation/page.tsx
-│   │   └── online-anliegen/page.tsx
+│   │   ├── online-anliegen/page.tsx
+│   │   └── terminal-bestellung/page.tsx
 │   ├── roadmap/page.tsx                     # zeigt Module mit Status "in-development" / "planned"
 │   ├── kontakt/page.tsx
 │   ├── impressum/page.tsx
