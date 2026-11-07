@@ -18,12 +18,6 @@ import heroBg from "../../public/images/hero_bg.png";
 import terminal4 from "../../public/images/terminal_4.jpeg";
 import { availableModules, inDevelopmentModules } from "@/data/modules";
 
-const efficiencyPoints = [
-  "Optimierung der Praxisabläufe durch Software und KI-Technologie",
-  "Verbesserung der Patientenversorgung durch automatisierte Prozesse",
-  "Entlastung für Ärzte und medizinisches Fachpersonal",
-];
-
 const pillars = [
   {
     icon: Zap,

@@ -25,7 +25,6 @@ import {
   Wifi,
   Navigation,
   CreditCard,
-  HardDrive,
   Anchor,
 } from "lucide-react";
 
