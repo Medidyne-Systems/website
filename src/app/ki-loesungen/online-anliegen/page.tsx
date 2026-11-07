@@ -32,22 +32,22 @@ const features = [
   {
     icon: Inbox,
     title: "Alles im Eingang",
-    description: "Jedes Anliegen ist ein eigener Vorgang im Eingang von EmMa — mit den Angaben aus dem Formular und Kopier-Knöpfen für Ihr Praxissystem.",
+    description: "Jedes Anliegen ist ein eigener Vorgang im Eingang von EmMa — mit den Angaben aus dem Formular und Kopier-Knöpfen für Name, Geburtsdatum und Text zum Einfügen in T2med.",
   },
   {
     icon: CalendarClock,
     title: "Annahmezeiten und Kontingente",
-    description: "Wochenplan, Schließtage und Tageskontingente je Anliegen. Ist etwas geschlossen, sieht der Patient, ab wann es wieder geht.",
+    description: "Wochenplan, Schließtage und Tageskontingente je Anliegen. Ist etwas geschlossen, sieht der Patient, ab wann es wieder geht — oder dass er anrufen soll.",
   },
   {
     icon: Reply,
     title: "Antworten mit Bausteinen",
-    description: "Feste Knöpfe wie „Rezept liegt bereit“ und eigene Antwort-Bausteine der Praxis. Was hinausgeht, wählt und prüft immer Ihr Team.",
+    description: "Feste Knöpfe wie „Bereit“ („Ihr Rezept liegt bei uns zur Abholung bereit.“) und eigene Antwort-Bausteine der Praxis. Antworten wählt Ihr Team, die automatische Eingangsbestätigung je Anliegen-Art legt die Praxis vorher fest.",
   },
   {
     icon: PhoneCall,
     title: "Klar kein Notfallkanal",
-    description: "In jedem Schritt steht „Nicht für Notfälle“ mit 112 und 116117. EmMa nimmt Anliegen entgegen und ordnet sie nach der gewählten Art — inhaltlich entscheidet das Praxisteam.",
+    description: "In jedem Schritt steht „Nicht für Notfälle“ mit 112 und 116117. EmMa nimmt Anliegen entgegen und kennzeichnet sie mit der gewählten Art — inhaltlich entscheidet das Praxisteam.",
   },
 ];
 

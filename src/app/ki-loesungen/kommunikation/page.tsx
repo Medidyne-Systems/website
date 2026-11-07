@@ -15,18 +15,18 @@ import { ModuleVideoSection } from "@/components/ModuleVideo";
 export const metadata: Metadata = {
   title: "Kommunikation",
   description:
-    "Patientennachrichten direkt aus der Praxis — per Knopfdruck aus dem Praxissystem, als E-Mail mit Briefkopf-PDF und Rückmeldung in die Akte.",
+    "Patientennachrichten direkt aus der Praxis — per Knopfdruck aus T2med, als E-Mail mit Briefkopf-PDF und Rückmeldung in die Akte.",
 };
 
 const features = [
   {
     icon: Send,
-    title: "Per Knopfdruck aus dem Praxissystem",
-    description: "Ein Knopf in Ihrem Praxissystem übergibt den Patienten über die GDT-Schnittstelle an EmMa. Der Auftrag liegt dann in einer Warteliste bereit.",
+    title: "Per Knopfdruck aus T2med",
+    description: "Ein Knopf in T2med übergibt den Patienten über die Schnittstelle zu T2med an EmMa. Der Auftrag liegt dann im Ausgang bereit.",
   },
   {
     icon: Mail,
-    title: "Auch ohne Praxissystem",
+    title: "Auch ohne T2med",
     description: "Name und E-Mail-Adresse von Hand eintragen, Textbaustein wählen, senden — unabhängig davon, ob der Knopf schon eingerichtet ist.",
   },
   {
@@ -37,17 +37,17 @@ const features = [
   {
     icon: RotateCcw,
     title: "Rückmeldung in die Akte",
-    description: "Nach dem Versand meldet EmMa an Ihr Praxissystem zurück — mit Kurzeintrag und dem versendeten Schreiben als PDF in der Patientenakte.",
+    description: "Bei Aufträgen aus T2med meldet EmMa den Versand zurück — mit Kurzeintrag und dem versendeten Schreiben als PDF in der Patientenakte.",
   },
   {
     icon: ShieldCheck,
     title: "Kein doppelter Versand",
-    description: "Ein zweiter Knopfdruck landet im selben Auftrag, ein wiederholter Versuch nach einem Fehler erzeugt keine zweite Nachricht.",
+    description: "Ein zweiter Knopfdruck landet im selben Auftrag, solange er noch nicht versendet ist. Ein wiederholter Versuch nach einem Fehler erzeugt keine zweite Nachricht.",
   },
   {
     icon: History,
     title: "Versand nachvollziehbar",
-    description: "Die Historie zeigt, was die Praxis wann an wen verschickt hat. Antworten der Patienten gehen direkt an den Absender, nicht in die Sammeladresse.",
+    description: "Die Historie zeigt, was die Praxis wann an wen verschickt hat. Antworten der Patienten landen im Postfach der Praxis.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function KommunikationPage() {
               Kommunikation
             </h1>
             <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
-              Patienten benachrichtigen, ohne das Praxissystem zu verlassen.
+              Patienten benachrichtigen — angestoßen mit einem Klick in T2med.
             </p>
           </div>
         </div>
@@ -82,8 +82,8 @@ export default function KommunikationPage() {
           <div className="text-center mb-10">
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">Funktionen</h2>
             <p className="mt-4 text-base text-midnight/60 leading-relaxed max-w-2xl mx-auto">
-              Befund liegt vor, Bitte um Rückruf, Terminhinweis — Nachrichten an Patienten gehen per
-              E-Mail direkt aus der Praxis hinaus, der Nachweis landet in der Akte.
+              Bitte im Labor vorstellen, Bitte um Rückruf, Terminhinweis — Nachrichten an Patienten gehen
+              per E-Mail direkt aus der Praxis hinaus, bei Aufträgen aus T2med landet der Nachweis in der Akte.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

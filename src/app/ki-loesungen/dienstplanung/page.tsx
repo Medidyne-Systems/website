@@ -33,7 +33,7 @@ const features = [
   {
     icon: Scale,
     title: "Faire Verteilung",
-    description: "Wie oft jemand welche Aufgabe hat, richtet sich nach der verfügbaren Vertragszeit — eine Halbtagskraft bekommt etwa halb so viele Dienste wie eine Vollzeitkraft.",
+    description: "Wer bisher weniger Dienste hatte, kommt zuerst dran — die Wochenstunden aus dem Vertrag werden dabei nicht überschritten. Die Statistik zeigt, ob die Verteilung zur Vertragszeit passt.",
   },
   {
     icon: ShieldAlert,
@@ -48,7 +48,7 @@ const features = [
   {
     icon: Sparkles,
     title: "Regeln in einem Satz",
-    description: "Planungsregeln beschreiben Sie in Alltagssprache, die KI macht daraus eine Regel zum Prüfen und Übernehmen. Namen der Mitarbeiter gehen dabei nie an die KI.",
+    description: "Planungsregeln beschreiben Sie in Alltagssprache, die KI macht daraus eine Regel zum Prüfen und Übernehmen. Namen und Kürzel der Mitarbeiter ersetzt EmMa vorher durch Platzhalter.",
   },
   {
     icon: Palmtree,
@@ -73,7 +73,7 @@ const features = [
   {
     icon: ArrowLeftRight,
     title: "Dienste tauschen",
-    description: "Einen Dienst auf eine andere Zelle ziehen tauscht ihn — auch über Tage und Schichten hinweg. Passt jemand nicht auf den neuen Platz, sagt EmMa es vorher.",
+    description: "Einen Dienst am Computer auf eine andere Zelle ziehen tauscht ihn — auch über Tage und Schichten hinweg. Passt jemand nicht auf den neuen Platz, sagt EmMa es vorher.",
   },
   {
     icon: UsersRound,

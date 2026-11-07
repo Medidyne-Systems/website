@@ -4,8 +4,11 @@ import {
   ArrowRight,
   CalendarRange,
   RefreshCw,
+  Search,
   Tags,
+  Move,
   AlertTriangle,
+  Repeat,
   ShieldCheck,
   Bell,
 } from "lucide-react";
@@ -15,14 +18,19 @@ import { ModuleVideoSection } from "@/components/ModuleVideo";
 export const metadata: Metadata = {
   title: "Patientenkalender",
   description:
-    "Patiententermine in der Wochenansicht — freie Termine entstehen direkt aus dem Dienstplan und folgen jeder Änderung von selbst.",
+    "Patiententermine im Tagesblick mit einer Spalte je Person im Dienst — freie Termine entstehen direkt aus dem Dienstplan und folgen jeder Änderung von selbst.",
 };
 
 const features = [
   {
     icon: CalendarRange,
-    title: "Die Woche auf einen Blick",
-    description: "Freie und gebuchte Termine stehen in derselben Wochenansicht. Wochenweise blättern, direkt zur aktuellen Woche springen.",
+    title: "Der Tag im Blick",
+    description: "Eine Spalte je Person im Dienst — freie Zeit grün, Termine in der Farbe ihrer Terminart. Dazu die Wochenansicht und mit einem Klick zurück zu heute.",
+  },
+  {
+    icon: Search,
+    title: "Nächstmöglicher Termin sofort gefunden",
+    description: "EmMa zeigt den nächsten freien Termin — auswählen, buchen. Standort oder Person dürfen auch „egal“ sein.",
   },
   {
     icon: RefreshCw,
@@ -35,14 +43,24 @@ const features = [
     description: "Jede Terminart hat ihre Dauer und ist nur in den passenden Diensten buchbar — etwa Blutabnahme im Labor, Akutsprechstunde in der Sprechstunde.",
   },
   {
+    icon: Move,
+    title: "Verschieben per Ziehen",
+    description: "Termine lassen sich per Ziehen verschieben, eine Absage lässt sich zurücknehmen, und jeder Termin hat seinen Verlauf.",
+  },
+  {
     icon: AlertTriangle,
-    title: "Betroffene Termine sofort sichtbar",
-    description: "Steht hinter einem gebuchten Termin nach einer Dienstplan-Änderung kein passender Dienst mehr, ist er markiert und in einer eigenen Liste gesammelt.",
+    title: "Ausfälle als Telefonliste",
+    description: "Steht hinter einem gebuchten Termin kein passender Dienst mehr, landet er in der Liste „Ausfälle“ — mit Telefonnummer, Status (erreicht, nicht erreicht, Nachricht hinterlassen), Notiz und „Neuer Termin“.",
+  },
+  {
+    icon: Repeat,
+    title: "Ketten, Serien, Räume",
+    description: "Terminketten und Serien, Räume und Geräte — dazu Terminzettel zum Ausdrucken und die Tagesliste als PDF.",
   },
   {
     icon: ShieldCheck,
     title: "Gebuchtes bleibt, wie es ist",
-    description: "EmMa verschiebt oder löscht keinen gebuchten Termin von selbst. Die Entscheidung, wie es weitergeht, trifft Ihr Team.",
+    description: "EmMa verschiebt oder löscht keinen anstehenden Termin von selbst, die Entscheidung trifft Ihr Team. Gelöscht wird ein Termin erst 30 Tage nach dem Termintag.",
   },
   {
     icon: Bell,
