@@ -35,7 +35,7 @@ export default function ImpressumPage() {
               <p className="text-midnight/60 leading-relaxed">
                 Medidyne Systems GmbH
                 <br />
-                Nürtingen Str. 52
+                Nürtinger Str. 52
                 <br />
                 72074 Tübingen
               </p>
@@ -194,11 +194,11 @@ export default function ImpressumPage() {
               </p>
             </div>
 
-            <p className="text-xs text-midnight/40 leading-relaxed">
+            {/* <p className="text-xs text-midnight/40 leading-relaxed">
               Impressum von WebsiteWissen.com, dem Ratgeber für
               WordPress-Websites, WordPress-Hosting und Website-Kosten nach
               einem Muster von Kanzlei Hasselbach Rechtsanwälte.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
