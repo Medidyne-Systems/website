@@ -36,6 +36,7 @@ import posterKommunikation from "../../public/images/videos/kommunikation.jpg";
 import posterZeiterfassung from "../../public/images/videos/zeiterfassung.jpg";
 import posterOnlineAnliegen from "../../public/images/videos/online-anliegen.jpg";
 import posterTerminalBestellung from "../../public/images/videos/terminal-bestellung.jpg";
+import posterPraxisHomepage from "../../public/images/videos/praxis-homepage.jpg";
 
 export type ModuleStatus = "available" | "in-development" | "planned";
 
@@ -275,8 +276,15 @@ export const modules: Module[] = [
     internalName: "Homepage",
     description:
       "Die Internetseite der Praxis direkt in EmMa pflegen: Seiten, Standorte, Team, Beiträge, Stellenangebote und Bilder liegen an einer Stelle. Ein Assistent richtet die Homepage aus den Praxisdaten ein, die schon in EmMa stehen.",
-    status: "in-development",
+    status: "available",
     icon: Globe,
+    video: {
+      src: "/videos/praxis-homepage.mp4",
+      poster: posterPraxisHomepage,
+      description:
+        "Eine neue MFA richtet die Praxis-Homepage ein: EmMa übernimmt die Praxisdaten, sie wählt Aufbau und Farben, ergänzt das Impressum und gibt die Seite frei. Wochen später sagt sie EmMa, dass eine neue Kollegin ins Team kommt. EmMa zeigt den Vorschlag in der Vorschau, online geht er erst nach ihrer Freigabe.",
+    },
+    linkText: "Mehr zur Praxis-Homepage",
     homepageBullet: "Praxis-Homepage direkt in EmMa pflegen",
     useCaseText: "Die Praxis-Homepage selbst aktuell halten",
   },

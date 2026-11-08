@@ -82,6 +82,7 @@ src/
 │   │   ├── zeiterfassung/page.tsx
 │   │   ├── kommunikation/page.tsx
 │   │   ├── online-anliegen/page.tsx
+│   │   ├── praxis-homepage/page.tsx
 │   │   └── terminal-bestellung/page.tsx
 │   ├── roadmap/page.tsx                     # zeigt Module mit Status "in-development" / "planned"
 │   ├── kontakt/page.tsx

@@ -17,7 +17,8 @@
 - [ ] Sprechstunden-Doku-Seite: Text „Sprachmemos Ihres iPhones“ (`sprechstunden-doku/page.tsx`) passt nicht mehr zum Clip, der „Smartphone“ sagt — mit Christian klären
 - [ ] T2med über die Clips mit nachgebauter T2med-Oberfläche informieren (Christian)
 - [ ] EMMA-Session: in den Clip-NOTIZEN Christians Freigabe der Stimme „Sulafat“ (2026-11-07) eintragen; die Website liest EMMA nur
-- [ ] Praxis-Homepage auf „verfügbar“ setzen (inkl. Detailseite), sobald das Modul auf PROD ist
+- [x] Praxis-Homepage auf „verfügbar“ setzen (inkl. Detailseite und Clip) — Christians Entscheidung 2026-11-08, obwohl das Modul noch nicht auf PROD ist (nur Pilot)
+- [ ] Praxis-Homepage: Seitentext gegen das ausgelieferte Handbuch prüfen, sobald Kapitel 4.12 „Homepage“ auf PROD ist (Text folgt bisher den Workway-Quellen und dem Clip)
 - [ ] Prüfen, ob das Personal-Modul auf die Website gehört
 - [ ] `minimatch`-Lücke schließen, sobald ein Fix existiert (GHSA-g3hv-75wg-m249, moderate, DoS durch Glob-Muster; Stand 2026-11-07: 8 moderate Funde, alle über `eslint-config-next` → `typescript-eslint` → `@typescript-eslint/typescript-estree` → `minimatch` 10.x). Nur Dev-Toolchain, nicht auf der Live-Seite. Bei Session-Start `npm audit` prüfen; wenn ein Update ohne Herabstufung da ist: `npm audit fix` bzw. `eslint-config-next` updaten → Branch/PR. **Nicht** `npm audit fix --force` (stuft auf `eslint-config-next` 15 zurück). Die frühere `braces`-Lücke meldet `npm audit` seit 2026-11-07 nicht mehr.
 
