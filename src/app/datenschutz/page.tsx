@@ -39,7 +39,7 @@ export default function DatenschutzPage() {
               <p className="text-midnight/60 leading-relaxed mt-3">
                 Medidyne Systems GmbH
                 <br />
-                Nürtingen Str. 52
+                Nürtinger Str. 52
                 <br />
                 72074 Tübingen
                 <br />
