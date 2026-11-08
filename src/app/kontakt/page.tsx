@@ -85,7 +85,7 @@ export default function KontaktPage() {
                       <p className="text-sm text-midnight/50 mt-1">
                         Medidyne Systems GmbH
                         <br />
-                        Nürtingen Str. 52
+                        Nürtinger Str. 52
                         <br />
                         72074 Tübingen
                       </p>

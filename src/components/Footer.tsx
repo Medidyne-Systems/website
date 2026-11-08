@@ -62,7 +62,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 text-violet shrink-0" />
                 <span className="text-sm">
-                  Nürtingen Str. 52<br />
+                  Nürtinger Str. 52<br />
                   72074 Tübingen
                 </span>
               </li>
