@@ -5,7 +5,7 @@
 
 ## Mittlere Priorität
 - [ ] Kontaktformular mit echtem Backend verbinden (aktuell mailto-Button; Plan Cloudflare Workers liegt vor — zurückgestellt, Stand 2026-09-27)
-- [ ] Modul-Detailseiten mit Screenshots / Produkt-Bildern ergänzen — vordringlich Patientenkalender, Zeiterfassung, Online-Anliegen: zeigen auf `/ki-loesungen` noch „Bild-Platzhalter“ (Bilder von Christian, über `inbox/`)
+- [ ] Modul-Detailseiten mit Screenshots / Produkt-Bildern ergänzen (Bilder von Christian, über `inbox/`). Seit 2026-11-09 zeigen alle Module auf `/ki-loesungen` außer Self-Check-In (echtes Terminal-Foto) Standbilder im Stil der EMMA-Clips, gezeichnet mit der Clip-Bibliothek (`workway/marketing/lib/emma-clip.js`, nur gelesen) und per Playwright gerendert; Szenen-Quellen lokal in `outbox/modulbilder/` (`szenen.html?s=<slug>`, neben `emma-clip.js` legen); echte Produktbilder können sie jederzeit ablösen
 - [ ] Feedback der Kollegen einarbeiten
 - [ ] Kollegen (MaximilianPfister, schindlerb) über neuen PR-Workflow + Branch-Schutz informieren
 - [x] Zeiterfassung auf „verfügbar“ setzen (inkl. Detailseite) — erledigt 2026-11-07 (PR #14)

@@ -104,12 +104,14 @@ public/
     ├── hero_bg.png                          # Hero-Hintergrundbild
     ├── abrechnung.jpg
     ├── automation.jpg
-    ├── dienstplan.jpg
-    ├── dokumente.jpg                        # Dokumenten-Management
+    ├── dienstplan.jpg                       # Modulbilder /ki-loesungen: Standbilder im EMMA-Clip-Stil
+    ├── dokumente.jpg                        #   (Clip-Bibliothek, 2026-11-09); Dokumenten-Management
     ├── gutachten.jpg                        # Schreibplatz
-    ├── kommunikation.jpg                    # Kommunikation (lizenzfrei, auf 16:9 zugeschnitten)
-    ├── wartezimmer.jpg
+    ├── kommunikation.jpg
+    ├── wartezimmer.jpg                      # Patienten-Aufruf
     ├── website_sprechstundedoku.jpg
+    ├── patientenkalender.jpg, zeiterfassung.jpg, online-anliegen.jpg,
+    ├── praxis-homepage.jpg, terminal-bestellung.jpg
     └── terminal_1-6.jpeg                    # Self-Check-In Terminal Produktfotos
 .github/
 └── workflows/

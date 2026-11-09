@@ -25,6 +25,11 @@ import dokumente from "../../public/images/dokumente.jpg";
 import abrechnung from "../../public/images/abrechnung.jpg";
 import dienstplan from "../../public/images/dienstplan.jpg";
 import kommunikation from "../../public/images/kommunikation.jpg";
+import imgPatientenkalender from "../../public/images/patientenkalender.jpg";
+import imgZeiterfassung from "../../public/images/zeiterfassung.jpg";
+import imgOnlineAnliegen from "../../public/images/online-anliegen.jpg";
+import imgPraxisHomepage from "../../public/images/praxis-homepage.jpg";
+import imgTerminalBestellung from "../../public/images/terminal-bestellung.jpg";
 import posterSelfCheckIn from "../../public/images/videos/self-check-in.jpg";
 import posterPatientenAufruf from "../../public/images/videos/patienten-aufruf.jpg";
 import posterSprechstundenDoku from "../../public/images/videos/sprechstunden-doku.jpg";
@@ -205,6 +210,7 @@ export const modules: Module[] = [
       "Patiententermine im Tagesblick mit einer Spalte je Person im Dienst — die freien Termine entstehen direkt aus dem Dienstplan. Ändert sich ein Dienst, zieht der Kalender von selbst nach, und Termine, hinter denen kein passender Dienst mehr steht, landen in der Liste „Ausfälle“.",
     status: "available",
     icon: CalendarRange,
+    image: imgPatientenkalender,
     video: {
       src: "/videos/patientenkalender.mp4",
       poster: posterPatientenkalender,
@@ -242,6 +248,7 @@ export const modules: Module[] = [
       "Arbeitszeiterfassung für das Praxisteam: Kommen und Gehen per Klick oder Chip am Check-In-Terminal, gesetzliche Mindestpausen automatisch berücksichtigt, Tages- und Wochensaldo, Freigabe von Überstunden durch die Praxisleitung und Stundennachweis als PDF.",
     status: "available",
     icon: Clock,
+    image: imgZeiterfassung,
     video: {
       src: "/videos/zeiterfassung.mp4",
       poster: posterZeiterfassung,
@@ -260,6 +267,7 @@ export const modules: Module[] = [
       "Ein Fenster auf Ihrer Praxis-Homepage für organisatorische Anliegen: Folgerezept, Überweisung, Rückruf oder Terminanfrage. Aus jedem Anliegen wird ein Nachrichtenverlauf, den Ihr Team im Eingang von EmMa beantwortet — mit eigenen Annahmezeiten und Antwort-Bausteinen.",
     status: "available",
     icon: MessageCircle,
+    image: imgOnlineAnliegen,
     video: {
       src: "/videos/online-anliegen.mp4",
       poster: posterOnlineAnliegen,
@@ -278,6 +286,7 @@ export const modules: Module[] = [
       "Die Internetseite der Praxis direkt in EmMa pflegen: Seiten, Standorte, Team, Beiträge, Stellenangebote und Bilder liegen an einer Stelle. Ein Assistent richtet die Homepage aus den Praxisdaten ein, die schon in EmMa stehen.",
     status: "available",
     icon: Globe,
+    image: imgPraxisHomepage,
     video: {
       src: "/videos/praxis-homepage.mp4",
       poster: posterPraxisHomepage,
@@ -296,6 +305,7 @@ export const modules: Module[] = [
       "Patienten bestellen Folgerezepte, Überweisungen und Sonstiges selbst am Check-In-Terminal: Karte stecken, Art wählen, sagen, was gebraucht wird. EmMa übernimmt das Gesprochene als Text in den Eingang, das Praxisteam bearbeitet die Bestellung dort — ohne Anstellen an der Anmeldung.",
     status: "available",
     icon: ClipboardList,
+    image: imgTerminalBestellung,
     video: {
       src: "/videos/terminal-bestellung.mp4",
       poster: posterTerminalBestellung,

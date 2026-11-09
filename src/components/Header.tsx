@@ -157,17 +157,17 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-0 top-0 z-40 transition-all duration-300 ${
+        className={`lg:hidden fixed inset-0 top-0 z-40 overflow-y-auto overscroll-contain transition-all duration-300 ${
           mobileOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
       >
         <div
-          className="absolute inset-0 bg-white/98 backdrop-blur-2xl"
+          className="fixed inset-0 bg-white/98 backdrop-blur-2xl"
           onClick={() => setMobileOpen(false)}
         />
-        <div className="relative z-10 flex flex-col pt-20 px-8 gap-1">
+        <div className="relative z-10 flex flex-col pt-20 pb-10 px-8 gap-1">
           {navItems.map((item) => (
             <div key={item.label}>
               <Link
